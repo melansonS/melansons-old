@@ -1,7 +1,19 @@
-import "./App.css";
+import { useState } from "react";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import ScrollContainer from "./components/ScrollContainer";
+
+import "./styles/App.css";
 
 function App() {
-  return <div className="App">Here we go !</div>;
+  const [section, setSection] = useState(1);
+  return (
+    <div className="App">
+      <Header />
+      <Nav section={section} setSection={setSection} />
+      <ScrollContainer section={section} setSection={setSection} />
+    </div>
+  );
 }
 
 export default App;

@@ -1,0 +1,12 @@
+.blinking-cursor {
+  animation: 1s cubic-bezier(1, -0.15, 1, 1) infinite blinky;
+}
+
+@keyframes blinky {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}

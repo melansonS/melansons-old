@@ -1,0 +1,67 @@
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  margin-left: $navWidth; /* width on NAV*/
+  margin-top: $headerHeight; /* Heigth on Header*/
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container,
+.scroll-area {
+  height: calc(100vh - #{$headerHeight});
+  min-height: 500px;
+}
+
+.scroll-area {
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  color: black;
+}
+
+.first {
+  margin-top: 0;
+  background-color: blanchedalmond;
+  justify-content: start;
+}
+
+.second {
+  background-color: aquamarine;
+}
+
+.third {
+  background-color: cadetblue;
+}
+
+.fourth {
+  background-color: steelblue;
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: bold;
+  font-size: 40px;
+}
+.typed-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 70px;
+  padding-left: 10%;
+}
+
+.subtext {
+  height: 1em;
+  padding-left: 3em;
+}
+
+.typed-sm::first-letter {
+  color: tomato;
+}
