@@ -141,8 +141,8 @@ header {
 
 .header-buttons .toggle-lang {
   font-size: 1em;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: font-size 0.4s ease;
+  transition: font-size 0.4s ease;
 }
 
 .header-buttons .toggle-lang:hover {
@@ -150,10 +150,10 @@ header {
 }
 
 .header-buttons .toggle-theme {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
 }
 
 .header-buttons .toggle-theme:hover {
@@ -183,14 +183,14 @@ nav {
 }
 
 nav a {
-  color: inherit;
-  opacity: 0.7;
-  padding: 1em 0;
-  text-decoration: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: opacity 0.8s ease;
-  transition: opacity 0.8s ease;
+  color: inherit;
+  height: 60px;
+  opacity: 0.7;
+  text-decoration: none;
+  -webkit-transition: opacity 0.4s ease, font-size 0.4s ease;
+  transition: opacity 0.4s ease, font-size 0.4s ease;
 }
 
 nav a:hover {
@@ -221,17 +221,17 @@ nav a:hover {
 .active {
   color: #212529;
   font-size: 1.5em;
-  -webkit-transition: opacity 0.8s ease;
-  transition: opacity 0.8s ease;
   opacity: 1;
+  -webkit-transition: opacity 0.4s ease, font-size 0.4s ease;
+  transition: opacity 0.4s ease, font-size 0.4s ease;
 }
 
 .active--dark {
   color: #fef9ef;
   font-size: 1.5em;
-  -webkit-transition: opacity 0.8s ease;
-  transition: opacity 0.8s ease;
   opacity: 1;
+  -webkit-transition: opacity 0.4s ease, font-size 0.4s ease;
+  transition: opacity 0.4s ease, font-size 0.4s ease;
 }
 
 .blinking-cursor {

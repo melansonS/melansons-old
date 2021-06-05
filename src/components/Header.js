@@ -1,9 +1,9 @@
 import React from "react";
 import { FaRegMoon, FaSun } from "react-icons/fa";
 
-const Header = ({ darkTheme, setDarkTheme, lang, setLang }) => {
+const Header = ({ darkTheme, handleSetDarkTheme, lang, handleSetLang }) => {
   const toggleLanguage = () => {
-    setLang(lang === "en" ? "fr" : "en");
+    handleSetLang(lang === "en" ? "fr" : "en");
   };
   return (
     <header className={darkTheme ? "header--dark" : ""}>
@@ -19,7 +19,7 @@ const Header = ({ darkTheme, setDarkTheme, lang, setLang }) => {
             Lang
           </button>
           <button
-            onClick={() => setDarkTheme(!darkTheme)}
+            onClick={() => handleSetDarkTheme(!darkTheme)}
             title="Toggle Light/Dark Theme"
             className="toggle-theme">
             {darkTheme ? <FaSun /> : <FaRegMoon />}

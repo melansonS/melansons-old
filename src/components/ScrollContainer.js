@@ -4,14 +4,23 @@ import TypedText from "./TypedText";
 
 const ScrollContainer = ({ lang, setSection, section }) => {
   const handleScroll = (e) => {
-    if (Math.ceil(e.target.scrollTop / (e.target.scrollHeight / 4)) === 0)
+    // forces an even delay when scrolling up or down before the setSection get's called
+    if (
+      Math.round(e.target.scrollTop / (e.target.scrollHeight / 4) + 1) ===
+      section
+    ) {
       return;
+    }
+
     if (
       Math.ceil(e.target.scrollTop / (e.target.scrollHeight / 4)) !== section
     ) {
-      setSection(Math.ceil(e.target.scrollTop / (e.target.scrollHeight / 4)));
+      setSection(
+        Math.floor(e.target.scrollTop / (e.target.scrollHeight / 4)) + 1
+      );
     }
   };
+
   return (
     <div className="scroll-container" onScroll={handleScroll}>
       <div id="sm" className="scroll-area first">

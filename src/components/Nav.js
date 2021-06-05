@@ -8,7 +8,7 @@ const Nav = ({ darkTheme, section, setSection }) => {
         onClick={() => setSection(1)}
         className={`${section === 1 ? activeClass : ""}`}
         href="#sm">
-        melansons
+        Home
       </a>
       <a
         onClick={() => setSection(2)}
