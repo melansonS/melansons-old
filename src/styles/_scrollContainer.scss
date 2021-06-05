@@ -26,6 +26,11 @@
   scroll-snap-align: start;
   color: black;
   background-color: blanchedalmond;
+
+  p {
+    font-weight: bold;
+    font-size: 40px;
+  }
 }
 
 .first {
@@ -54,11 +59,6 @@
 .fourth {
   // background-color: steelblue;
   margin-bottom: 0;
-}
-
-p {
-  font-weight: bold;
-  font-size: 40px;
 }
 
 .subtext {

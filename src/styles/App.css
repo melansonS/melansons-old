@@ -39,6 +39,11 @@
   background-color: blanchedalmond;
 }
 
+.scroll-area p {
+  font-weight: bold;
+  font-size: 40px;
+}
+
 .first {
   margin-top: 0;
   -webkit-box-pack: start;
@@ -64,11 +69,6 @@
 
 .fourth {
   margin-bottom: 0;
-}
-
-p {
-  font-weight: bold;
-  font-size: 40px;
 }
 
 .subtext {
@@ -139,6 +139,16 @@ header {
   cursor: pointer;
 }
 
+.header-buttons .toggle-lang {
+  font-size: 1em;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.header-buttons .toggle-lang:hover {
+  font-size: 1.1em;
+}
+
 .header-buttons .toggle-theme {
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
@@ -179,6 +189,8 @@ nav a {
   text-decoration: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
 }
 
 nav a:hover {

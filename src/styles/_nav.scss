@@ -21,6 +21,7 @@ nav {
     padding: 1em 0;
     text-decoration: none;
     box-sizing: border-box;
+    transition: opacity 0.8s ease;
 
     &:hover {
       opacity: 1;

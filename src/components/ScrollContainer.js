@@ -1,8 +1,8 @@
 import React from "react";
-
+import { text } from "../utils/constants";
 import TypedText from "./TypedText";
 
-const ScrollContainer = ({ setSection, section }) => {
+const ScrollContainer = ({ lang, setSection, section }) => {
   const handleScroll = (e) => {
     if (Math.ceil(e.target.scrollTop / (e.target.scrollHeight / 4)) === 0)
       return;
@@ -17,7 +17,7 @@ const ScrollContainer = ({ setSection, section }) => {
       <div id="sm" className="scroll-area first">
         <TypedText
           text="Samuel Melanson. "
-          subText="Developer "
+          subText={text.developer[lang]}
           delay={800}
           className="typed-sm"
         />

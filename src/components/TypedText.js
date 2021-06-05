@@ -22,6 +22,11 @@ const TypedText = ({ text, delay = 0, subText, className }) => {
     startTyping();
   }, [text, delay, subText]);
 
+  useEffect(() => {
+    setTyped("");
+    setTypedSubtitle("");
+  }, [text, subText]);
+
   return (
     <div className="typed-text">
       <b className={className}>

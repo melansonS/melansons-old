@@ -42,6 +42,15 @@ header {
     }
   }
 
+  .toggle-lang {
+    font-size: 1em;
+    transition: 0.5s ease;
+
+    &:hover {
+      font-size: 1.1em;
+    }
+  }
+
   .toggle-theme {
     transition: transform 0.5s;
     &:hover {
