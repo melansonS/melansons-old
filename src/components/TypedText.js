@@ -10,13 +10,13 @@ const TypedText = ({ text, delay = 0, subText, className }) => {
     const startTyping = async () => {
       for (let i = 0; i < text.length; i++) {
         setTyped(text.slice(0, i));
-        await sleep(70);
+        await sleep(60);
       }
       if (!subText) return;
       await sleep(delay);
       for (let i = 0; i < subText.length; i++) {
         setTypedSubtitle(subText.slice(0, i));
-        await sleep(70);
+        await sleep(60);
       }
     };
     startTyping();

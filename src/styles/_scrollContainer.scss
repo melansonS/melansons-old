@@ -25,36 +25,40 @@
   justify-content: center;
   scroll-snap-align: start;
   color: black;
+  background-color: blanchedalmond;
 }
 
 .first {
   margin-top: 0;
-  background-color: blanchedalmond;
+  // background-color: blanchedalmond;
   justify-content: start;
+  align-items: start;
+
+  .typed-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 70px;
+    padding-left: 10%;
+    padding-top: 10%;
+  }
 }
 
 .second {
-  background-color: aquamarine;
+  // background-color: aquamarine;
 }
 
 .third {
-  background-color: cadetblue;
+  // background-color: cadetblue;
 }
 
 .fourth {
-  background-color: steelblue;
+  // background-color: steelblue;
   margin-bottom: 0;
 }
 
 p {
   font-weight: bold;
   font-size: 40px;
-}
-.typed-text {
-  display: flex;
-  flex-direction: column;
-  font-size: 70px;
-  padding-left: 10%;
 }
 
 .subtext {

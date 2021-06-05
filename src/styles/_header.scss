@@ -1,18 +1,51 @@
-header {
+@mixin header {
+  height: $headerHeight;
+  left: 0;
   position: absolute;
   top: 0;
+  width: 100%;
+}
+
+header {
+  @include header();
+  background-color: $light;
+  color: $darkGrey;
+}
+.header--dark {
+  @include header();
+  background-color: $darkGrey;
+  color: $light;
 }
 
 .header-container {
+  align-items: center;
+  box-sizing: border-box;
   display: flex;
-  width: 100%;
   height: 100%;
   justify-content: space-between;
-  align-items: center;
   padding: 0 4em;
-  box-sizing: border-box;
+  width: 100%;
 }
 
-.tomato {
-  color: tomato;
+.header-buttons {
+  display: flex;
+
+  button {
+    font-family: inherit;
+    align-items: center;
+    display: flex;
+    font-size: 1.5em;
+    padding: 0 1em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .toggle-theme {
+    transition: transform 0.5s;
+    &:hover {
+      transform: rotate(-15deg);
+    }
+  }
 }

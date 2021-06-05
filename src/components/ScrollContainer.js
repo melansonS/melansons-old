@@ -18,7 +18,7 @@ const ScrollContainer = ({ setSection, section }) => {
         <TypedText
           text="Samuel Melanson. "
           subText="Developer "
-          delay={1000}
+          delay={800}
           className="typed-sm"
         />
       </div>

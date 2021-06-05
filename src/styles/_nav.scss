@@ -1,18 +1,49 @@
-nav {
+@mixin nav {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  height: calc(100% - #{$headerHeight});
+  left: 0;
   min-height: 500px;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: $headerHeight;
+  width: $navWidth;
+}
+
+nav {
+  @include nav();
+  color: $darkGrey;
+  background-color: $light;
+
+  a {
+    color: inherit;
+    opacity: 0.7;
+    padding: 1em 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.nav--dark {
+  @include nav();
+  color: $light;
+  background-color: $darkGrey;
 }
 
 .active {
-  color: $light;
+  color: $darkGrey;
   font-size: 1.5em;
-  transition: color 0.7s ease;
+  transition: opacity 0.8s ease;
+  opacity: 1;
 }
 
-a {
+.active--dark {
   color: $light;
+  font-size: 1.5em;
+  transition: opacity 0.8s ease;
+  opacity: 1;
 }
