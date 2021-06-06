@@ -10,7 +10,9 @@ const Header = ({ darkTheme, handleSetDarkTheme, lang, handleSetLang }) => {
     <header className={darkTheme ? "header--dark" : ""}>
       <div className="header-container">
         <h1 className="">
-          melanson<span className="tomato">S</span>
+          <a href="/">
+            melanson<span className="tomato">S</span>
+          </a>
         </h1>
         <div className="header-buttons">
           <button

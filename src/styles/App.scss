@@ -9,6 +9,11 @@
 body {
   font-family: "PT Mono", monospace;
   margin: 0;
+  background-color: $light;
+}
+
+.body--dark {
+  background-color: $darkGrey;
 }
 
 .App {
@@ -18,11 +23,6 @@ body {
 .App--dark {
   background-color: $darkGrey;
   color: $light;
-}
-
-.scroll-container {
-  margin-top: $headerHeight;
-  margin-left: $navWidth;
 }
 
 button {

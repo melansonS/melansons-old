@@ -1,7 +1,7 @@
 .scroll-container {
   scroll-snap-type: y mandatory;
   margin-left: $navWidth; /* width on NAV*/
-  margin-top: $headerHeight; /* Heigth on Header*/
+  margin-top: $headerHeight;
   -ms-overflow-style: none; /* IE and Edge */
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
@@ -61,9 +61,25 @@
   color: tomato;
 }
 
+@media screen and (max-width: $mediumBreakpoint) {
+  .typed-text {
+    font-size: 52px !important;
+  }
+}
+
 @media screen and (max-width: $mobileBreakpoint) {
   .scroll-container {
     margin-left: 0 !important;
+    margin-top: $mobileHeaderHeight;
     transition: 0.4s;
+  }
+
+  .scroll-container,
+  .scroll-area {
+    height: calc(100vh - #{$mobileHeaderHeight});
+  }
+
+  .typed-text {
+    font-size: 30px !important;
   }
 }

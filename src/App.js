@@ -32,6 +32,10 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    document.querySelector("body").classList = darkTheme ? "body--dark" : "";
+  }, [darkTheme]);
+
   const handleResize = () => {
     setIsMobile(window.innerWidth < breakpoints.mobile);
   };

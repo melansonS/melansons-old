@@ -1,12 +1,15 @@
 @mixin nav {
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: calc(100% - #{$headerHeight});
   left: 0;
   min-height: 500px;
+  padding-top: 2em;
   position: absolute;
   top: $headerHeight;
+  transition: transform 1s ease;
   width: $navWidth;
 }
 
@@ -16,16 +19,19 @@
     left: 0;
   }
   to {
-    transform: translateX(100%);
-    right: 0;
+    transform: translateX(40%);
+    left: 100%;
+    // right: 0;
   }
+}
+.show-nav {
+  transform: translateX(0) !important;
 }
 
 nav {
   @include nav();
   background-color: $light;
   color: $darkGrey;
-  transition: transform 1s ease;
 
   a {
     box-sizing: border-box;
@@ -39,10 +45,6 @@ nav {
       opacity: 1;
     }
   }
-}
-
-.show-nav {
-  transform: translateX(0);
 }
 
 .nav--dark {
@@ -73,7 +75,9 @@ nav {
   justify-content: center;
   position: absolute;
   left: 0;
+  top: -2em;
   transform: translateX(-100%);
+  width: fit-content;
 
   .indicator {
     color: inherit;
@@ -107,8 +111,9 @@ nav {
 }
 
 .mobile-nav-menu-trigger {
-  transform: translateX(100%);
-  width: 100%;
+  transform: translate(100%, -2em);
+  position: absolute;
+  right: 0;
   z-index: 3;
 
   svg {
@@ -126,8 +131,11 @@ nav {
 }
 
 @media only screen and (max-width: $mobileBreakpoint) {
-  nav {
+  nav,
+  .nav--dark {
     transform: translateX(-100%);
     transition: 0.4s;
+    height: calc(100% - #{$mobileHeaderHeight});
+    top: $mobileHeaderHeight;
   }
 }

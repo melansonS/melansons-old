@@ -25,6 +25,11 @@ header {
   justify-content: space-between;
   padding: 0 4em;
   width: 100%;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 .header-buttons {
@@ -45,9 +50,11 @@ header {
   .toggle-lang {
     font-size: 1em;
     transition: font-size 0.4s ease;
+    width: 80px;
 
     &:hover {
       font-size: 1.1em;
+      text-decoration: underline;
     }
   }
 
@@ -60,8 +67,20 @@ header {
 }
 
 @media only screen and (max-width: $mobileBreakpoint) {
-  nav {
-    transform: translateX(-100%);
-    transition: 0.4s;
+  header,
+  .header--dark {
+    height: $mobileHeaderHeight;
+  }
+
+  .header-container {
+    padding: 0 2em;
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    .header-buttons button {
+      font-size: 1em;
+    }
   }
 }
