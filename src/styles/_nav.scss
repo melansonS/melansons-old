@@ -5,7 +5,6 @@
   flex-direction: column;
   height: calc(100% - #{$headerHeight});
   left: 0;
-  min-height: 500px;
   padding-top: 2em;
   position: absolute;
   top: $headerHeight;
@@ -38,6 +37,7 @@ nav {
     color: inherit;
     height: 60px;
     opacity: 0.7;
+    font-size: 1.1rem;
     text-decoration: none;
     transition: opacity 0.4s ease, font-size 0.4s ease;
 
@@ -55,14 +55,14 @@ nav {
 
 .active {
   color: $darkGrey;
-  font-size: 1.5em;
+  font-size: 1.6rem;
   opacity: 1;
   transition: opacity 0.4s ease, font-size 0.4s ease;
 }
 
 .active--dark {
   color: $light;
-  font-size: 1.5em;
+  font-size: 1.6rem;
   opacity: 1;
   transition: opacity 0.4s ease, font-size 0.4s ease;
 }
@@ -118,7 +118,8 @@ nav {
 
   svg {
     font-size: 2em;
-    margin: 1em;
+    margin-left: 1em;
+    margin-top: 1em;
     mix-blend-mode: difference;
     opacity: 0.8;
     transition: opacity 0.4s;
@@ -134,8 +135,8 @@ nav {
   nav,
   .nav--dark {
     transform: translateX(-100%);
-    transition: 0.4s;
-    height: calc(100% - #{$mobileHeaderHeight});
+    transition: transform 0.4s;
+    height: 100%;
     top: $mobileHeaderHeight;
   }
 }

@@ -1,21 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaRegMoon } from "react-icons/fa";
 import { ImSun } from "react-icons/im";
+import sleep from "../utils/sleep";
 
 const Header = ({ darkTheme, handleSetDarkTheme, lang, handleSetLang }) => {
-  const toggleLanguage = () => {
+  const [typing, setTyping] = useState(true);
+
+  useEffect(() => {
+    const firstLoad = async () => {
+      await sleep(3000);
+      setTyping(false);
+    };
+    firstLoad();
+  }, []);
+
+  const toggleLanguage = async () => {
     handleSetLang(lang === "en" ? "fr" : "en");
+    setTyping(true);
+    await sleep(3000);
+    setTyping(false);
   };
+
   return (
     <header className={darkTheme ? "header--dark" : ""}>
       <div className="header-container">
         <h1 className="">
           <a href="/">
-            melanson<span className="tomato">S</span>
+            melanson<span className="pop">S</span>
           </a>
         </h1>
         <div className="header-buttons">
           <button
+            disabled={typing}
             className="toggle-lang"
             title="Toggle Language En/Fr"
             onClick={toggleLanguage}>

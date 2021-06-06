@@ -10,6 +10,7 @@ body {
   font-family: "PT Mono", monospace;
   margin: 0;
   background-color: $light;
+  overflow-y: hidden;
 }
 
 .body--dark {
@@ -32,6 +33,6 @@ button {
   color: inherit;
 }
 
-.tomato {
-  color: tomato;
+.pop {
+  color: $popColor;
 }

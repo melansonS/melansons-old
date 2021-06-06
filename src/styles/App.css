@@ -20,14 +20,28 @@
 .scroll-container,
 .scroll-area {
   height: calc(100vh - 125px);
-  min-height: 500px;
 }
 
 .scroll-area {
-  background-color: blanchedalmond;
-  color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: calc(100vh - 125px);
   margin: 1em 0;
   scroll-snap-align: start;
+  padding-left: 40px;
+  background-color: #eee8d5;
+  color: #212529;
+}
+
+.scroll-area--dark {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: calc(100vh - 125px);
+  margin: 1em 0;
+  scroll-snap-align: start;
+  padding-left: 40px;
+  color: #fef9ef;
+  background-color: #292e33;
 }
 
 .first {
@@ -50,7 +64,7 @@
           flex-direction: column;
   font-size: 70px;
   padding-left: 10%;
-  padding-top: 10%;
+  padding-top: 20vh;
 }
 
 .fourth {
@@ -73,6 +87,9 @@
 }
 
 @media screen and (max-width: 800px) {
+  .first .typed-text {
+    padding-left: 0;
+  }
   .scroll-container {
     margin-left: 0 !important;
     margin-top: 80px;
@@ -80,11 +97,29 @@
     transition: 0.4s;
   }
   .scroll-container,
-  .scroll-area {
+  .scroll-area,
+  .scroll-area--dark {
     height: calc(100vh - 80px);
   }
+  .scroll-area,
+  .scroll-area--dark {
+    padding-left: 85px;
+  }
+  .typed-text {
+    font-size: 50px !important;
+  }
+  .subtext {
+    padding-left: 1em;
+  }
+}
+
+@media screen and (max-width: 499px) {
   .typed-text {
     font-size: 30px !important;
+    padding-left: 0;
+  }
+  .typed-text .subtext {
+    padding-left: 0.5em;
   }
 }
 
@@ -146,10 +181,12 @@ header {
   display: flex;
   font-size: 1.5em;
   padding: 0 1em;
+  opacity: 0.8;
 }
 
 .header-buttons button:hover {
   cursor: pointer;
+  opacity: 1;
 }
 
 .header-buttons .toggle-lang {
@@ -189,6 +226,12 @@ header {
   }
   .header-container .header-buttons button {
     font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .header-container {
+    padding: 0 0.5em;
   }
 }
 
@@ -238,7 +281,6 @@ nav {
           flex-direction: column;
   height: calc(100% - 125px);
   left: 0;
-  min-height: 500px;
   padding-top: 2em;
   position: absolute;
   top: 125px;
@@ -257,6 +299,7 @@ nav a {
   color: inherit;
   height: 60px;
   opacity: 0.7;
+  font-size: 1.1rem;
   text-decoration: none;
   -webkit-transition: opacity 0.4s ease, font-size 0.4s ease;
   transition: opacity 0.4s ease, font-size 0.4s ease;
@@ -281,7 +324,6 @@ nav a:hover {
           flex-direction: column;
   height: calc(100% - 125px);
   left: 0;
-  min-height: 500px;
   padding-top: 2em;
   position: absolute;
   top: 125px;
@@ -296,7 +338,7 @@ nav a:hover {
 
 .active {
   color: #212529;
-  font-size: 1.5em;
+  font-size: 1.6rem;
   opacity: 1;
   -webkit-transition: opacity 0.4s ease, font-size 0.4s ease;
   transition: opacity 0.4s ease, font-size 0.4s ease;
@@ -304,7 +346,7 @@ nav a:hover {
 
 .active--dark {
   color: #fef9ef;
-  font-size: 1.5em;
+  font-size: 1.6rem;
   opacity: 1;
   -webkit-transition: opacity 0.4s ease, font-size 0.4s ease;
   transition: opacity 0.4s ease, font-size 0.4s ease;
@@ -379,7 +421,8 @@ nav a:hover {
 
 .mobile-nav-menu-trigger svg {
   font-size: 2em;
-  margin: 1em;
+  margin-left: 1em;
+  margin-top: 1em;
   mix-blend-mode: difference;
   opacity: 0.8;
   -webkit-transition: opacity 0.4s;
@@ -396,9 +439,11 @@ nav a:hover {
   .nav--dark {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    height: calc(100% - 80px);
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+    height: 100%;
     top: 80px;
   }
 }
@@ -430,6 +475,7 @@ body {
   font-family: "PT Mono", monospace;
   margin: 0;
   background-color: #fef9ef;
+  overflow-y: hidden;
 }
 
 .body--dark {
@@ -453,7 +499,7 @@ button {
   color: inherit;
 }
 
-.tomato {
+.pop {
   color: tomato;
 }
 /*# sourceMappingURL=App.css.map */

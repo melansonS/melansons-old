@@ -1,3 +1,11 @@
+@mixin scrollArea {
+  box-sizing: border-box;
+  height: calc(100vh - #{$headerHeight});
+  margin: 1em 0;
+  scroll-snap-align: start;
+  padding-left: 40px;
+}
+
 .scroll-container {
   scroll-snap-type: y mandatory;
   margin-left: $navWidth; /* width on NAV*/
@@ -15,14 +23,18 @@
 .scroll-container,
 .scroll-area {
   height: calc(100vh - #{$headerHeight});
-  min-height: 500px;
 }
 
 .scroll-area {
-  background-color: blanchedalmond;
-  color: black;
-  margin: 1em 0;
-  scroll-snap-align: start;
+  @include scrollArea();
+  background-color: $mainLight;
+  color: $darkGrey;
+}
+
+.scroll-area--dark {
+  @include scrollArea();
+  color: $light;
+  background-color: $mainGrey;
 }
 
 .first {
@@ -35,7 +47,7 @@
     flex-direction: column;
     font-size: 70px;
     padding-left: 10%;
-    padding-top: 10%;
+    padding-top: 20vh;
   }
 }
 
@@ -58,7 +70,7 @@
 }
 
 .typed-sm::first-letter {
-  color: tomato;
+  color: $popColor;
 }
 
 @media screen and (max-width: $mediumBreakpoint) {
@@ -68,6 +80,12 @@
 }
 
 @media screen and (max-width: $mobileBreakpoint) {
+  .first {
+    .typed-text {
+      padding-left: 0;
+    }
+  }
+
   .scroll-container {
     margin-left: 0 !important;
     margin-top: $mobileHeaderHeight;
@@ -75,11 +93,32 @@
   }
 
   .scroll-container,
-  .scroll-area {
+  .scroll-area,
+  .scroll-area--dark {
     height: calc(100vh - #{$mobileHeaderHeight});
   }
 
+  .scroll-area,
+  .scroll-area--dark {
+    padding-left: 85px;
+  }
+
+  .typed-text {
+    font-size: 50px !important;
+  }
+
+  .subtext {
+    padding-left: 1em;
+  }
+}
+
+@media screen and (max-width: 499px) {
   .typed-text {
     font-size: 30px !important;
+    padding-left: 0;
+
+    .subtext {
+      padding-left: 0.5em;
+    }
   }
 }

@@ -11,7 +11,7 @@ function App() {
   const [isMobile, setIsMobile] = useState(
     window.innerWidth < breakpoints.mobile
   );
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(false);
   const [lang, setLang] = useState("en");
 
   useEffect(() => {
