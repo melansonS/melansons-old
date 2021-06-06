@@ -1,5 +1,6 @@
 import React from "react";
-import { FaRegMoon, FaSun } from "react-icons/fa";
+import { FaRegMoon } from "react-icons/fa";
+import { ImSun } from "react-icons/im";
 
 const Header = ({ darkTheme, handleSetDarkTheme, lang, handleSetLang }) => {
   const toggleLanguage = () => {
@@ -22,7 +23,7 @@ const Header = ({ darkTheme, handleSetDarkTheme, lang, handleSetLang }) => {
             onClick={() => handleSetDarkTheme(!darkTheme)}
             title="Toggle Light/Dark Theme"
             className="toggle-theme">
-            {darkTheme ? <FaSun /> : <FaRegMoon />}
+            {darkTheme ? <ImSun /> : <FaRegMoon />}
           </button>
         </div>
       </div>

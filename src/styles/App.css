@@ -1,16 +1,17 @@
 .scroll-container {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
-  overflow-y: scroll;
   margin-left: 200px;
   /* width on NAV*/
-  margin-top: 100px;
+  margin-top: 125px;
   /* Heigth on Header*/
-  /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;
   /* IE and Edge */
+  overflow-y: scroll;
   scrollbar-width: none;
   /* Firefox */
+  -webkit-transition: margin 0.5s;
+  transition: margin 0.5s;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -19,29 +20,15 @@
 
 .scroll-container,
 .scroll-area {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 125px);
   min-height: 500px;
 }
 
 .scroll-area {
-  margin: 1em 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  scroll-snap-align: start;
-  color: black;
   background-color: blanchedalmond;
-}
-
-.scroll-area p {
-  font-weight: bold;
-  font-size: 40px;
+  color: black;
+  margin: 1em 0;
+  scroll-snap-align: start;
 }
 
 .first {
@@ -80,8 +67,16 @@
   color: tomato;
 }
 
+@media screen and (max-width: 800px) {
+  .scroll-container {
+    margin-left: 0 !important;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
 header {
-  height: 100px;
+  height: 125px;
   left: 0;
   position: absolute;
   top: 0;
@@ -91,7 +86,7 @@ header {
 }
 
 .header--dark {
-  height: 100px;
+  height: 125px;
   left: 0;
   position: absolute;
   top: 0;
@@ -161,6 +156,41 @@ header {
           transform: rotate(-15deg);
 }
 
+@media only screen and (max-width: 800px) {
+  nav {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
+@-webkit-keyframes slideIndicators {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    left: 0;
+  }
+  to {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    right: 0;
+  }
+}
+
+@keyframes slideIndicators {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    left: 0;
+  }
+  to {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    right: 0;
+  }
+}
+
 nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -172,14 +202,18 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: calc(100% - 100px);
+  height: calc(100% - 125px);
   left: 0;
   min-height: 500px;
   position: absolute;
-  top: 100px;
+  top: 125px;
   width: 200px;
-  color: #212529;
   background-color: #fef9ef;
+  color: #212529;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
 nav a {
@@ -197,6 +231,11 @@ nav a:hover {
   opacity: 1;
 }
 
+.show-nav {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 .nav--dark {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -208,11 +247,11 @@ nav a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: calc(100% - 100px);
+  height: calc(100% - 125px);
   left: 0;
   min-height: 500px;
   position: absolute;
-  top: 100px;
+  top: 125px;
   width: 200px;
   color: #fef9ef;
   background-color: #212529;
@@ -232,6 +271,91 @@ nav a:hover {
   opacity: 1;
   -webkit-transition: opacity 0.4s ease, font-size 0.4s ease;
   transition: opacity 0.4s ease, font-size 0.4s ease;
+}
+
+.section-indicator {
+  -webkit-animation: 1s ease 0.5s slideIndicators forwards;
+          animation: 1s ease 0.5s slideIndicators forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.section-indicator .indicator {
+  color: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: bold;
+  font-size: 40px;
+  height: 20px;
+  margin-left: 2vw;
+  margin-top: 20px;
+  mix-blend-mode: difference;
+  opacity: 0.4;
+  text-decoration: none;
+  -webkit-transition: opacity 0.4s ease, font-size 0.4s ease;
+  transition: opacity 0.4s ease, font-size 0.4s ease;
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+
+.section-indicator .indicator:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.section-indicator .active {
+  opacity: 1;
+}
+
+.mobile-nav-menu-trigger {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  width: 100%;
+  z-index: 3;
+}
+
+.mobile-nav-menu-trigger svg {
+  font-size: 2em;
+  margin: 1em;
+  mix-blend-mode: difference;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.mobile-nav-menu-trigger svg:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  nav {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
 }
 
 .blinking-cursor {
@@ -273,7 +397,7 @@ body {
 }
 
 .scroll-container {
-  margin-top: 100px;
+  margin-top: 125px;
   margin-left: 200px;
 }
 

@@ -23,7 +23,7 @@ const ScrollContainer = ({ lang, setSection, section }) => {
 
   return (
     <div className="scroll-container" onScroll={handleScroll}>
-      <div id="sm" className="scroll-area first">
+      <div id="home" className="scroll-area first">
         <TypedText
           text="Samuel Melanson. "
           subText={text.developer[lang]}
@@ -32,13 +32,20 @@ const ScrollContainer = ({ lang, setSection, section }) => {
         />
       </div>
       <div id="about" className="scroll-area second">
-        <p>About</p>
+        <h1>{text.about[lang]}</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the.
+        </p>
       </div>
       <div id="projects" className="scroll-area third">
-        <p>Projects</p>
+        <h1>{text.projects[lang]}</h1>
       </div>
       <div id="contact" className="scroll-area fourth">
-        <p>contact</p>
+        <h1>{text.contact[lang]}</h1>
       </div>
     </div>
   );

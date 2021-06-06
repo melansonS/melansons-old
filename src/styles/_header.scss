@@ -58,3 +58,10 @@ header {
     }
   }
 }
+
+@media only screen and (max-width: $mobileBreakpoint) {
+  nav {
+    transform: translateX(-100%);
+    transition: 0.4s;
+  }
+}
