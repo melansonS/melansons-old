@@ -1,3 +1,8 @@
+import grouped_s from "../images/grouped_s.png";
+import remindinator_s from "../images/remindinator_s.png";
+import typing_s from "../images/typing_s.png";
+import unsplash_s from "../images/unsplash_s.png";
+
 export const text = {
   developer: {
     en: "Developer ",
@@ -34,3 +39,30 @@ export const weekDays = [
 export const breakpoints = {
   mobile: 800,
 };
+
+export const projects = [
+  {
+    src: unsplash_s,
+    title: "Unsplash Demo",
+    url: "https://unsplash-search-alpha.vercel.app/",
+    github: "https://github.com/melansonS/Unsplash-API",
+  },
+  {
+    src: typing_s,
+    title: "Typing Test",
+    url: "https://typing-test-ten.vercel.app/",
+    github: "https://github.com/melansonS/typing-test",
+  },
+  {
+    src: grouped_s,
+    title: "Grouped",
+    url: "https://grouped-b4deb.web.app/",
+    github: "https://github.com/melansonS/Grouped",
+  },
+  {
+    src: remindinator_s,
+    title: "Remindinator",
+    url: "https://remindinator.herokuapp.com/",
+    github: "https://github.com/melansonS/remindinator",
+  },
+];

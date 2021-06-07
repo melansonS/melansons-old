@@ -1,6 +1,7 @@
 import React from "react";
 import { text } from "../utils/constants";
 import TypedText from "./TypedText";
+import SlideShow from "./SlideShow";
 
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
@@ -47,7 +48,7 @@ const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
           section === 2 ? "current-section" : ""
         }  about`}>
         <h1>{text.about[lang]}</h1>
-        <p>
+        <p className="about-p">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -60,7 +61,7 @@ const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
         className={`scroll-area${darkTheme ? "--dark" : ""} ${
           section === 3 ? "current-section" : ""
         }  projects`}>
-        <h1>{text.projects[lang]}</h1>
+        <SlideShow lang={lang} darkTheme={darkTheme} />
       </div>
       <div
         id="contact"

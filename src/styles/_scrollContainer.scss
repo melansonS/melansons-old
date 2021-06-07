@@ -6,6 +6,7 @@
   margin: 1em 0;
   scroll-snap-align: start;
   padding-left: 40px;
+  padding-right: 40px;
   padding-top: $headerHeight;
   width: calc(100vw - #{$navWidth});
 }
@@ -63,18 +64,30 @@
 }
 
 .about {
-  // background-color: aquamarine;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .about-p {
+    max-width: 1000px;
+  }
 }
 
 .projects {
-  // background-color: cadetblue;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  padding-left: 10%;
+  padding-top: calc(3vh + #{$headerHeight});
 }
 
 .contact {
-  font-size: 30px;
+  font-size: 27px;
   margin-bottom: 0;
   padding-left: 10%;
-  padding-top: 15vh;
+  padding-top: calc(15vh + #{$headerHeight});
   position: relative;
 
   h1 {
@@ -107,14 +120,26 @@
   }
 
   .direct-contact {
-    position: absolute;
-    bottom: 5rem;
+    padding-top: 2rem;
+
+    .contact-pitch {
+      padding-top: 3em;
+    }
   }
 }
 
 @media screen and (max-width: $mediumBreakpoint) {
   .typed-text {
     font-size: 52px !important;
+  }
+
+  .contact {
+    font-size: 25px;
+    padding-top: calc(10vh + #{$headerHeight});
+  }
+
+  .projects {
+    align-items: center;
   }
 }
 
@@ -128,8 +153,13 @@
     }
   }
 
+  .projects {
+    padding-left: 55px !important;
+    padding-top: calc(5vh + #{$mobileHeaderHeight}) !important;
+  }
+
   .contact {
-    padding-top: 5vh;
+    padding-top: calc(5vh + #{$mobileHeaderHeight}) !important;
 
     h1 {
       font-size: 35px;
@@ -148,7 +178,6 @@
 
   .scroll-container {
     margin-left: 0 !important;
-    // margin-top: $mobileHeaderHeight;
 
     transition: 0.4s;
   }
@@ -156,7 +185,6 @@
   .scroll-container,
   .scroll-area,
   .scroll-area--dark {
-    // height: calc(100vh - #{$mobileHeaderHeight});
     height: 100%;
     width: 100vw !important;
   }
@@ -235,5 +263,12 @@
     .direct-contact {
       bottom: 6rem;
     }
+  }
+}
+
+@media screen and (max-height: 900px) {
+  .contact {
+    font-size: 25px !important;
+    padding-top: calc(10vh + #{$mobileHeaderHeight}) !important;
   }
 }
