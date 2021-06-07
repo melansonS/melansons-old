@@ -1,28 +1,29 @@
 @mixin scrollArea {
   box-sizing: border-box;
-  height: calc(100vh - #{$headerHeight});
+  // position: relative;
+  // height: calc(100vh - #{$headerHeight});
+  height: 100%;
   margin: 1em 0;
   scroll-snap-align: start;
   padding-left: 40px;
+  padding-top: $headerHeight;
+  width: calc(100vw - #{$navWidth});
 }
 
 .scroll-container {
-  scroll-snap-type: y mandatory;
+  height: 100%;
   margin-left: $navWidth; /* width on NAV*/
-  margin-top: $headerHeight;
   -ms-overflow-style: none; /* IE and Edge */
   overflow-y: scroll;
+  position: absolute;
   scrollbar-width: none; /* Firefox */
   transition: margin 0.5s;
+  scroll-snap-type: y mandatory;
+  width: calc(100vw - #{$navWidth});
 }
 
 .scroll-container::-webkit-scrollbar {
   display: none;
-}
-
-.scroll-container,
-.scroll-area {
-  height: calc(100vh - #{$headerHeight});
 }
 
 .scroll-area {
@@ -46,7 +47,7 @@
     display: flex;
     flex-direction: column;
     font-size: 70px;
-    padding-left: 10%;
+    padding-left: 8%;
     padding-top: 20vh;
 
     .typed-sm::first-letter {
@@ -57,6 +58,7 @@
   .subtext {
     height: 1em;
     padding-left: 3em;
+    // font-size: 0.8em;
   }
 }
 
@@ -120,6 +122,9 @@
   .home {
     .typed-text {
       padding-left: 0;
+      .subtext {
+        padding-left: 1em;
+      }
     }
   }
 
@@ -143,19 +148,23 @@
 
   .scroll-container {
     margin-left: 0 !important;
-    margin-top: $mobileHeaderHeight;
+    // margin-top: $mobileHeaderHeight;
+
     transition: 0.4s;
   }
 
   .scroll-container,
   .scroll-area,
   .scroll-area--dark {
-    height: calc(100vh - #{$mobileHeaderHeight});
+    // height: calc(100vh - #{$mobileHeaderHeight});
+    height: 100%;
+    width: 100vw !important;
   }
 
   .scroll-area,
   .scroll-area--dark {
     padding-left: 85px;
+    padding-top: $mobileHeaderHeight;
   }
 
   .typed-text {
@@ -168,12 +177,20 @@
 }
 
 @media screen and (max-width: 499px) {
+  .scroll-container,
+  .scroll-area,
+  .scroll-area--dark {
+    height: calc(100vh - #{$mobileHeaderHeight});
+    // height: 100%;
+  }
+
   .typed-text {
     font-size: 30px !important;
     padding-left: 0;
 
     .subtext {
       padding-left: 0.5em;
+      font-size: 0.8em;
     }
   }
 

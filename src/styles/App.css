@@ -1,34 +1,33 @@
 .scroll-container {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+  height: 100%;
   margin-left: 200px;
   /* width on NAV*/
-  margin-top: 125px;
   -ms-overflow-style: none;
   /* IE and Edge */
   overflow-y: scroll;
+  position: absolute;
   scrollbar-width: none;
   /* Firefox */
   -webkit-transition: margin 0.5s;
   transition: margin 0.5s;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  width: calc(100vw - 200px);
 }
 
 .scroll-container::-webkit-scrollbar {
   display: none;
 }
 
-.scroll-container,
-.scroll-area {
-  height: calc(100vh - 125px);
-}
-
 .scroll-area {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: calc(100vh - 125px);
+  height: 100%;
   margin: 1em 0;
   scroll-snap-align: start;
   padding-left: 40px;
+  padding-top: 125px;
+  width: calc(100vw - 200px);
   background-color: #eee8d5;
   color: #212529;
 }
@@ -36,10 +35,12 @@
 .scroll-area--dark {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: calc(100vh - 125px);
+  height: 100%;
   margin: 1em 0;
   scroll-snap-align: start;
   padding-left: 40px;
+  padding-top: 125px;
+  width: calc(100vw - 200px);
   color: #fef9ef;
   background-color: #292e33;
 }
@@ -63,7 +64,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 70px;
-  padding-left: 10%;
+  padding-left: 8%;
   padding-top: 20vh;
 }
 
@@ -128,6 +129,9 @@
   .home .typed-text {
     padding-left: 0;
   }
+  .home .typed-text .subtext {
+    padding-left: 1em;
+  }
   .contact {
     padding-top: 5vh;
   }
@@ -144,18 +148,19 @@
   }
   .scroll-container {
     margin-left: 0 !important;
-    margin-top: 80px;
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
   .scroll-container,
   .scroll-area,
   .scroll-area--dark {
-    height: calc(100vh - 80px);
+    height: 100%;
+    width: 100vw !important;
   }
   .scroll-area,
   .scroll-area--dark {
     padding-left: 85px;
+    padding-top: 80px;
   }
   .typed-text {
     font-size: 50px !important;
@@ -166,12 +171,18 @@
 }
 
 @media screen and (max-width: 499px) {
+  .scroll-container,
+  .scroll-area,
+  .scroll-area--dark {
+    height: calc(100vh - 80px);
+  }
   .typed-text {
     font-size: 30px !important;
     padding-left: 0;
   }
   .typed-text .subtext {
     padding-left: 0.5em;
+    font-size: 0.8em;
   }
   .contact {
     font-size: 30px !important;
@@ -215,7 +226,8 @@ header {
   left: 0;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 100vw;
+  z-index: 10;
   background-color: #fef9ef;
   color: #212529;
 }
@@ -225,7 +237,8 @@ header {
   left: 0;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 100vw;
+  z-index: 10;
   background-color: #212529;
   color: #fef9ef;
 }
@@ -365,11 +378,11 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: calc(100% - 125px);
+  height: 100%;
   left: 0;
   padding-top: 2em;
   position: absolute;
-  top: 125px;
+  padding-top: calc(40px + 125px);
   -webkit-transition: -webkit-transform 1s ease;
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
@@ -409,11 +422,11 @@ nav a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: calc(100% - 125px);
+  height: 100%;
   left: 0;
   padding-top: 2em;
   position: absolute;
-  top: 125px;
+  padding-top: calc(40px + 125px);
   -webkit-transition: -webkit-transform 1s ease;
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
@@ -531,8 +544,7 @@ nav a:hover {
     transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
     transition: transform 0.4s, -webkit-transform 0.4s;
-    height: calc(100vh - 80px);
-    top: 80px;
+    padding-top: calc(40px + 80px);
   }
 }
 
@@ -563,6 +575,7 @@ footer {
   position: absolute;
   bottom: 1rem;
   right: 3rem;
+  z-index: 3;
 }
 
 footer a {
@@ -599,11 +612,11 @@ footer .email-icon {
 body {
   background-color: #fef9ef;
   font-family: "PT Mono", monospace;
+  height: 100%;
   margin: 0;
 }
 
 .root {
-  height: 100vh;
   overflow-y: hidden;
 }
 
@@ -630,5 +643,23 @@ button {
 
 .pop {
   color: tomato;
+}
+
+.cover {
+  bottom: 0;
+  height: 80px;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  background-color: #eee8d5;
+}
+
+.cover--dark {
+  bottom: 0;
+  height: 80px;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  background-color: #292e33;
 }
 /*# sourceMappingURL=App.css.map */

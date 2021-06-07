@@ -5,7 +5,10 @@ import TypedText from "./TypedText";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
+import { weekDays } from "../utils/constants";
+
 const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
+  const today = new Date(Date.now());
   const handleScroll = (e) => {
     // forces an "even" delay when scrolling up or down before the setSection get's called
     if (
@@ -92,6 +95,9 @@ const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
               <a href="mailto:samuelmelanson@live.com">
                 <HiOutlineMail className="email-icon" />
               </a>
+            </div>
+            <div className="contact-pitch">
+              Enjoy the rest of your {weekDays[today.getDay()][lang]}
             </div>
           </div>
         </div>

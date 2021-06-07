@@ -3,11 +3,11 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: calc(100% - #{$headerHeight});
+  height: 100%;
   left: 0;
   padding-top: 2em;
   position: absolute;
-  top: $headerHeight;
+  padding-top: calc(40px + #{$headerHeight});
   transition: transform 1s ease;
   width: $navWidth;
   z-index: 5;
@@ -137,8 +137,6 @@ nav {
   .nav--dark {
     transform: translateX(-100%);
     transition: transform 0.4s;
-    height: calc(100vh - #{$mobileHeaderHeight});
-    // height: calc(100%);
-    top: $mobileHeaderHeight;
+    padding-top: calc(40px + #{$mobileHeaderHeight});
   }
 }

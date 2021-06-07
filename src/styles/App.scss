@@ -10,13 +10,13 @@
 body {
   background-color: $light;
   font-family: "PT Mono", monospace;
-  // height: 100vh;
+  height: 100%;
   margin: 0;
   // overflow-y: hidden;
 }
 
 .root {
-  height: 100vh;
+  // height: 100vh;
   overflow-y: hidden;
 }
 .body--dark {
@@ -41,4 +41,22 @@ button {
 
 .pop {
   color: $popColor;
+}
+
+@mixin cover {
+  bottom: 0;
+  height: $mobileHeaderHeight;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.cover {
+  @include cover();
+  background-color: $mainLight;
+}
+
+.cover--dark {
+  @include cover();
+  background-color: $mainGrey;
 }

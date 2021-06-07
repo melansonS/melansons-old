@@ -34,6 +34,27 @@ function App() {
   }, []);
 
   useEffect(() => {
+    if (isMobile) {
+      window.addEventListener("load", function () {
+        if (isMobile)
+          setTimeout(function () {
+            // This hides the address bar:
+            window.scrollTo(0, 1);
+          }, 0);
+      });
+    }
+    return () => {
+      window.removeEventListener("load", function () {
+        if (isMobile)
+          setTimeout(function () {
+            // This hides the address bar:
+            window.scrollTo(0, 1);
+          }, 0);
+      });
+    };
+  }, [isMobile]);
+
+  useEffect(() => {
     document.querySelector("body").classList = darkTheme ? "body--dark" : "";
   }, [darkTheme]);
 
@@ -73,6 +94,7 @@ function App() {
         setSection={setSection}
       />
       <Footer />
+      {isMobile && <div className={`cover${darkTheme ? "--dark" : ""}`}></div>}
     </div>
   );
 }
