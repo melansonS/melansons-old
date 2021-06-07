@@ -4,7 +4,7 @@ import TypedText from "./TypedText";
 
 const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
   const handleScroll = (e) => {
-    // forces an even delay when scrolling up or down before the setSection get's called
+    // forces an "even" delay when scrolling up or down before the setSection get's called
     if (
       Math.round(e.target.scrollTop / (e.target.scrollHeight / 4) + 1) ===
       section

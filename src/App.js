@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import ScrollContainer from "./components/ScrollContainer";
@@ -71,6 +72,7 @@ function App() {
         section={section}
         setSection={setSection}
       />
+      <Footer />
     </div>
   );
 }
