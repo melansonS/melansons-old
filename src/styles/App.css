@@ -44,7 +44,7 @@
   background-color: #292e33;
 }
 
-.first {
+.home {
   margin-top: 0;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -54,7 +54,7 @@
           align-items: start;
 }
 
-.first .typed-text {
+.home .typed-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,17 +67,55 @@
   padding-top: 20vh;
 }
 
-.fourth {
-  margin-bottom: 0;
+.home .typed-text .typed-sm::first-letter {
+  color: tomato;
 }
 
-.subtext {
+.home .subtext {
   height: 1em;
   padding-left: 3em;
 }
 
-.typed-sm::first-letter {
+.contact {
+  font-size: 30px;
+  margin-bottom: 0;
+  padding-left: 10%;
+  padding-top: 15vh;
+  position: relative;
+}
+
+.contact h1 {
+  font-size: 1.7em;
+}
+
+.contact .contact-pitch a {
   color: tomato;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  padding-left: 20px;
+}
+
+.contact .contact-pitch a:hover {
+  opacity: 1;
+}
+
+.contact .contact-pitch a svg {
+  -webkit-transform: translateY(22%);
+          transform: translateY(22%);
+}
+
+.contact .what-who {
+  padding-left: 80px;
+}
+
+.contact .what-who .contact-pitch:nth-child(2) {
+  padding-top: 1em;
+}
+
+.contact .direct-contact {
+  position: absolute;
+  bottom: 5rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -87,8 +125,22 @@
 }
 
 @media screen and (max-width: 800px) {
-  .first .typed-text {
+  .home .typed-text {
     padding-left: 0;
+  }
+  .contact {
+    padding-top: 5vh;
+  }
+  .contact h1 {
+    font-size: 35px;
+    padding-right: 1em;
+  }
+  .contact .contact-pitch {
+    font-size: 20px;
+  }
+  .contact .what-who {
+    padding-left: 20px;
+    padding-right: 2em;
   }
   .scroll-container {
     margin-left: 0 !important;
@@ -120,6 +172,41 @@
   }
   .typed-text .subtext {
     padding-left: 0.5em;
+  }
+  .contact {
+    font-size: 30px !important;
+  }
+  .contact h1 {
+    font-size: 30px;
+  }
+  .contact .contact-pitch {
+    font-size: 18px !important;
+  }
+  .contact .what-who {
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .contact {
+    font-size: 25px !important;
+  }
+  .contact h1 {
+    font-size: 25px;
+  }
+  .contact .contact-pitch {
+    font-size: 14px !important;
+  }
+  .contact .contact-pitch svg {
+    font-size: 1.2em;
+  }
+  .contact .what-who {
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+  .contact .direct-contact {
+    bottom: 6rem;
   }
 }
 
@@ -288,6 +375,7 @@ nav {
   transition: transform 1s ease;
   transition: transform 1s ease, -webkit-transform 1s ease;
   width: 200px;
+  z-index: 5;
   background-color: #fef9ef;
   color: #212529;
 }
@@ -331,6 +419,7 @@ nav a:hover {
   transition: transform 1s ease;
   transition: transform 1s ease, -webkit-transform 1s ease;
   width: 200px;
+  z-index: 5;
   color: #fef9ef;
   background-color: #212529;
 }
@@ -442,7 +531,7 @@ nav a:hover {
     transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
     transition: transform 0.4s, -webkit-transform 0.4s;
-    height: 100%;
+    height: calc(100vh - 80px);
     top: 80px;
   }
 }
@@ -508,9 +597,13 @@ footer .email-icon {
 }
 
 body {
+  background-color: #fef9ef;
   font-family: "PT Mono", monospace;
   margin: 0;
-  background-color: #fef9ef;
+}
+
+.root {
+  height: 100vh;
   overflow-y: hidden;
 }
 

@@ -8,12 +8,17 @@
 
 // --
 body {
-  font-family: "PT Mono", monospace;
-  margin: 0;
   background-color: $light;
-  overflow-y: hidden;
+  font-family: "PT Mono", monospace;
+  // height: 100vh;
+  margin: 0;
+  // overflow-y: hidden;
 }
 
+.root {
+  height: 100vh;
+  overflow-y: hidden;
+}
 .body--dark {
   background-color: $darkGrey;
 }

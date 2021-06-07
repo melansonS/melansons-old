@@ -37,7 +37,7 @@
   background-color: $mainGrey;
 }
 
-.first {
+.home {
   margin-top: 0;
   justify-content: start;
   align-items: start;
@@ -48,29 +48,66 @@
     font-size: 70px;
     padding-left: 10%;
     padding-top: 20vh;
+
+    .typed-sm::first-letter {
+      color: $popColor;
+    }
+  }
+
+  .subtext {
+    height: 1em;
+    padding-left: 3em;
   }
 }
 
-.second {
+.about {
   // background-color: aquamarine;
 }
 
-.third {
+.projects {
   // background-color: cadetblue;
 }
 
-.fourth {
-  // background-color: steelblue;
+.contact {
+  font-size: 30px;
   margin-bottom: 0;
-}
+  padding-left: 10%;
+  padding-top: 15vh;
+  position: relative;
 
-.subtext {
-  height: 1em;
-  padding-left: 3em;
-}
+  h1 {
+    font-size: 1.7em;
+  }
 
-.typed-sm::first-letter {
-  color: $popColor;
+  .contact-pitch {
+    a {
+      color: $popColor;
+      opacity: 0.8;
+      transition: opacity 0.4s;
+      padding-left: 20px;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      svg {
+        transform: translateY(22%);
+      }
+    }
+  }
+
+  .what-who {
+    padding-left: 80px;
+
+    .contact-pitch:nth-child(2) {
+      padding-top: 1em;
+    }
+  }
+
+  .direct-contact {
+    position: absolute;
+    bottom: 5rem;
+  }
 }
 
 @media screen and (max-width: $mediumBreakpoint) {
@@ -80,9 +117,27 @@
 }
 
 @media screen and (max-width: $mobileBreakpoint) {
-  .first {
+  .home {
     .typed-text {
       padding-left: 0;
+    }
+  }
+
+  .contact {
+    padding-top: 5vh;
+
+    h1 {
+      font-size: 35px;
+      padding-right: 1em;
+    }
+
+    .contact-pitch {
+      font-size: 20px;
+    }
+
+    .what-who {
+      padding-left: 20px;
+      padding-right: 2em;
     }
   }
 
@@ -119,6 +174,49 @@
 
     .subtext {
       padding-left: 0.5em;
+    }
+  }
+
+  .contact {
+    font-size: 30px !important;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    .contact-pitch {
+      font-size: 18px !important;
+    }
+
+    .what-who {
+      margin-bottom: 2rem;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .contact {
+    font-size: 25px !important;
+
+    h1 {
+      font-size: 25px;
+    }
+
+    .contact-pitch {
+      font-size: 14px !important;
+      svg {
+        font-size: 1.2em;
+      }
+    }
+
+    .what-who {
+      margin-bottom: 2rem;
+      padding: 0;
+    }
+
+    .direct-contact {
+      bottom: 6rem;
     }
   }
 }

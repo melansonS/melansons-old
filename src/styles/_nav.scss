@@ -10,6 +10,7 @@
   top: $headerHeight;
   transition: transform 1s ease;
   width: $navWidth;
+  z-index: 5;
 }
 
 @keyframes slideIndicators {
@@ -136,7 +137,8 @@ nav {
   .nav--dark {
     transform: translateX(-100%);
     transition: transform 0.4s;
-    height: 100%;
+    height: calc(100vh - #{$mobileHeaderHeight});
+    // height: calc(100%);
     top: $mobileHeaderHeight;
   }
 }
