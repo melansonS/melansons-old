@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaRegMoon } from "react-icons/fa";
 import { ImSun } from "react-icons/im";
+import { text } from "../utils/constants";
 import sleep from "../utils/sleep";
 
 const Header = ({
@@ -39,7 +40,7 @@ const Header = ({
           <button
             disabled={typing}
             className="toggle-lang"
-            title="Toggle Language En/Fr"
+            title={text.toggleLang[lang]}
             onClick={toggleLanguage}>
             {isMobile
               ? lang === "en"
@@ -51,7 +52,7 @@ const Header = ({
           </button>
           <button
             onClick={() => handleSetDarkTheme(!darkTheme)}
-            title="Toggle Light/Dark Theme"
+            title={text.toggleTheme[lang]}
             className="toggle-theme">
             {darkTheme ? <ImSun /> : <FaRegMoon />}
           </button>
