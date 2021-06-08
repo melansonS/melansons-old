@@ -19,7 +19,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 450px;
+    height: 449px;
     position: relative;
     width: 450px;
 
@@ -33,12 +33,22 @@
     }
   }
 
+  button {
+    font-size: 1.5em;
+    transition: transform 0.4s;
+    &:hover {
+      cursor: pointer;
+      transform: translateX(0);
+    }
+  }
+
   .left {
     animation: fadeIn 0.8s forwards;
     opacity: 0;
     left: 1vw;
     position: absolute;
     top: 50%;
+    transform: translateX(8px);
   }
 
   .right {
@@ -47,6 +57,7 @@
     top: 50%;
     position: absolute;
     right: 1vw;
+    transform: translateX(-8px);
   }
 
   .frame-description {
@@ -172,6 +183,41 @@
         bottom: 0.5rem;
         right: 0.5rem;
       }
+    }
+  }
+}
+
+//HEIGHT QUERIES
+@media screen and (max-height: 890px) {
+  .img-container {
+    height: 300px !important;
+    width: 300px !important;
+
+    img {
+      height: 300px !important;
+      width: 300px !important;
+    }
+
+    .icon-links {
+      bottom: 0.5rem;
+      right: 0.5rem;
+    }
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .img-container {
+    height: 200px !important;
+    width: 200px !important;
+
+    img {
+      height: 200px !important;
+      width: 200px !important;
+    }
+
+    .icon-links {
+      bottom: 0.5rem;
+      right: 0.5rem;
     }
   }
 }

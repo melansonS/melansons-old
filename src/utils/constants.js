@@ -97,7 +97,7 @@ export const projects = [
   {
     src: unsplash_s,
     darkImg: true,
-    title: "Unsplash Demo",
+    title: "Unsplash",
     url: "https://unsplash-search-alpha.vercel.app/",
     github: "https://github.com/melansonS/Unsplash-API",
     description:

@@ -8,18 +8,23 @@ import {
 
 const LightBox = ({ lang, darkTheme, project, updateFrame, closeModal }) => {
   useEffect(() => {
-    const escapeModal = (e) => {
+    const modalHotkeys = (e) => {
       if (e.key === "Escape") {
         closeModal();
       }
-      console.log(e);
+      if (e.key === "ArrowRight") {
+        updateFrame("right");
+      }
+      if (e.key === "ArrowLeft") {
+        updateFrame("left");
+      }
     };
-    window.addEventListener("keyup", escapeModal);
+    window.addEventListener("keyup", modalHotkeys);
 
     return () => {
-      window.removeEventListener("keyup", escapeModal);
+      window.removeEventListener("keyup", modalHotkeys);
     };
-  }, [closeModal]);
+  }, [closeModal, updateFrame]);
 
   return (
     <div className="modal-bg" onClick={closeModal}>

@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { projects } from "../utils/constants";
 import LightBox from "./Lightbox";
+import { projects } from "../utils/constants";
 
-const SlideShow = ({ lang, darkTheme }) => {
+const Gallery = ({ lang, darkTheme }) => {
   const [frame, setFrame] = useState(0);
   const [showLightbox, setShowLightbox] = useState(false);
 
   const closeModal = () => {
     setShowLightbox(false);
+  };
+
+  const handleShowLightBox = (i) => {
+    setFrame(i);
+    setShowLightbox(true);
   };
 
   const updateFrame = (direction) => {
@@ -24,18 +28,19 @@ const SlideShow = ({ lang, darkTheme }) => {
   };
 
   return (
-    <div className="slideshow-container">
-      <h1 className="frame-description" key={frame + 1000}>
-        {projects[frame].title}
-      </h1>
-      <div className="slideshow">
-        <button onClick={() => updateFrame("left")} className="left">
-          <FaChevronLeft />
-        </button>
-        <button onClick={() => setShowLightbox(!showLightbox)}>show</button>
-        <button onClick={() => updateFrame("right")} className="right">
-          <FaChevronRight />
-        </button>
+    <div className="gallery">
+      <div className="projects-container">
+        {projects.map((project, i) => {
+          return (
+            <div key={`project-thumbnail-${project.id}`} className={`project`}>
+              <h1>{project.title}</h1>
+              <img
+                alt={`thumbnail for ${project.title}`}
+                onClick={() => handleShowLightBox(i)}
+                src={project.src}></img>
+            </div>
+          );
+        })}
       </div>
       {showLightbox && (
         <LightBox
@@ -50,4 +55,4 @@ const SlideShow = ({ lang, darkTheme }) => {
   );
 };
 
-export default SlideShow;
+export default Gallery;

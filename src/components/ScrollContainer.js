@@ -1,7 +1,7 @@
 import React from "react";
 import { text } from "../utils/constants";
 import TypedText from "./TypedText";
-import SlideShow from "./SlideShow";
+import Gallery from "./Gallery";
 
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
@@ -62,7 +62,7 @@ const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
         className={`scroll-area${darkTheme ? "--dark" : ""} ${
           section === 3 ? "current-section" : ""
         }  projects`}>
-        <SlideShow lang={lang} darkTheme={darkTheme} />
+        <Gallery lang={lang} darkTheme={darkTheme} />
       </div>
       <div
         id="contact"
