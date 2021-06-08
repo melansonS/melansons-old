@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translateX(-10%);
 
   .left {
     transform: translateX(8px);
@@ -66,20 +67,14 @@
     }
   }
 
-  .placeholder {
-    background-color: forestgreen;
-    width: 100%;
-    height: 100%;
-  }
-
   .frame-description {
     animation: fadeIn 0.8s forwards;
     opacity: 0;
-    padding-top: 1em;
     padding-left: 3em;
     width: 100%;
     position: relative;
     a {
+      padding-top: 1em;
       color: inherit;
       left: 4.5em;
       position: absolute;
@@ -89,6 +84,8 @@
 
 @media screen and(max-width: $mobileBreakpoint) {
   .slideshow-container {
+    transform: translateX(0);
+
     .frame {
       img {
         min-width: 100px;

@@ -7,6 +7,7 @@ import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
 import { weekDays } from "../utils/constants";
+import convertText from "../utils/convertText";
 
 const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
   const today = new Date(Date.now());
@@ -69,10 +70,10 @@ const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
           section === 4 ? "current-section" : ""
         }  contact`}>
         <div>
-          <h1>Go Check out:</h1>
+          <h1>{text.contactTitle[lang]}</h1>
           <div className="what-who">
             <div className="contact-pitch">
-              - <b>what</b> I'm working on
+              {convertText(text.workingOn[lang])}
               <a
                 target="_blank"
                 href="https://github.com/melansonS"
@@ -81,7 +82,7 @@ const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
               </a>
             </div>
             <div className="contact-pitch">
-              - <b> who </b> I'm working with
+              {convertText(text.workingWith[lang])}
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/samuel-melanson/"
@@ -92,13 +93,13 @@ const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
           </div>
           <div className="direct-contact">
             <div className="contact-pitch">
-              Or Get in touch with me directly!
+              {text.directContact[lang]}
               <a href="mailto:samuelmelanson@live.com">
                 <HiOutlineMail className="email-icon" />
               </a>
             </div>
             <div className="contact-pitch">
-              Enjoy the rest of your {weekDays[today.getDay()][lang]}
+              {text.greeting[lang]} {weekDays[today.getDay()][lang]}
             </div>
           </div>
         </div>

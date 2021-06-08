@@ -8,6 +8,7 @@ export const text = {
     en: "Developer ",
     fr: "Développeur ",
   },
+  // NAV OPTIONS
   home: {
     en: "Home",
     fr: "Acceuil",
@@ -23,6 +24,27 @@ export const text = {
   contact: {
     en: "Contact",
     fr: "Contact",
+  },
+  // CONTACT PAGE
+  contactTitle: {
+    en: "Go check out:",
+    fr: "Allez voir:",
+  },
+  workingOn: {
+    en: "- ##BWhat## I'm workin on ",
+    fr: "- sur ##Bquoi## je travaille",
+  },
+  workingWith: {
+    en: "- ##BWho## I'm working with",
+    fr: "- avec ##Bqui## je travaille",
+  },
+  directContact: {
+    en: "Or get in touch with me directly!",
+    fr: "Ou contactez-moi directement!",
+  },
+  greeting: {
+    en: "Enjoy the rest of your",
+    fr: "Profitez bien du reste de votre",
   },
 };
 
@@ -55,7 +77,7 @@ export const projects = [
   },
   {
     src: grouped_s,
-    title: "Grouped",
+    title: "Grouped.",
     url: "https://grouped-b4deb.web.app/",
     github: "https://github.com/melansonS/Grouped",
   },
