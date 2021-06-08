@@ -1,0 +1,83 @@
+@mixin lightbox {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  padding: 2rem;
+  position: relative;
+  width: 80%;
+  z-index: 21;
+
+  img {
+    animation: fadeIn 0.8s forwards;
+    opacity: 0;
+    width: 50%;
+  }
+
+  .left {
+    animation: fadeIn 0.8s forwards;
+    opacity: 0;
+    left: 1vw;
+    position: absolute;
+    top: 50%;
+  }
+  .right {
+    animation: fadeIn 0.8s forwards;
+    opacity: 0;
+    top: 50%;
+    position: absolute;
+    right: 1vw;
+  }
+
+  img {
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+  }
+
+  .frame-description {
+    animation: fadeIn 0.8s forwards;
+    opacity: 0;
+    padding-left: 3em;
+    width: 100%;
+    position: relative;
+    a {
+      padding-top: 1em;
+      color: inherit;
+      left: 4.5em;
+      position: absolute;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-bg {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+
+.lightbox {
+  @include lightbox();
+  background-color: $light;
+}
+
+.lightbox--dark {
+  @include lightbox();
+  background-color: $darkGrey;
+}

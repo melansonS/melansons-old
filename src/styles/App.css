@@ -697,8 +697,7 @@ footer .email-icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: translateX(-10%);
-          transform: translateX(-10%);
+  padding-right: 10%;
 }
 
 .slideshow-container .left {
@@ -764,42 +763,12 @@ footer .email-icon {
   border: 1px solid #fef9ef;
 }
 
-.slideshow-container .frame-description {
-  -webkit-animation: fadeIn 0.8s forwards;
-          animation: fadeIn 0.8s forwards;
-  opacity: 0;
-  padding-left: 3em;
-  width: 100%;
-  position: relative;
-}
-
-.slideshow-container .frame-description a {
-  padding-top: 1em;
-  color: inherit;
-  left: 4.5em;
-  position: absolute;
-}
-
 @media screen and (max-width: 800px) {
   .slideshow-container {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    padding-right: 0;
   }
   .slideshow-container .frame img {
     min-width: 100px;
-  }
-  .frame-description {
-    font-size: 1.5em;
-  }
-  .frame-description a {
-    font-size: 0.6em;
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 499px) {
-  .frame-description a {
-    font-size: 0.4em;
   }
 }
 
@@ -819,6 +788,166 @@ footer .email-icon {
   .slideshow .frame img {
     max-height: 250px;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-bg {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+
+.lightbox {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 70%;
+  padding: 2rem;
+  position: relative;
+  width: 80%;
+  z-index: 21;
+  background-color: #fef9ef;
+}
+
+.lightbox img {
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  opacity: 0;
+  width: 50%;
+}
+
+.lightbox .left {
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  opacity: 0;
+  left: 1vw;
+  position: absolute;
+  top: 50%;
+}
+
+.lightbox .right {
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  opacity: 0;
+  top: 50%;
+  position: absolute;
+  right: 1vw;
+}
+
+.lightbox img {
+  -webkit-animation: fadeIn 1s forwards;
+          animation: fadeIn 1s forwards;
+  opacity: 0;
+}
+
+.lightbox .frame-description {
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  opacity: 0;
+  padding-left: 3em;
+  width: 100%;
+  position: relative;
+}
+
+.lightbox .frame-description a {
+  padding-top: 1em;
+  color: inherit;
+  left: 4.5em;
+  position: absolute;
+}
+
+.lightbox--dark {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 70%;
+  padding: 2rem;
+  position: relative;
+  width: 80%;
+  z-index: 21;
+  background-color: #212529;
+}
+
+.lightbox--dark img {
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  opacity: 0;
+  width: 50%;
+}
+
+.lightbox--dark .left {
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  opacity: 0;
+  left: 1vw;
+  position: absolute;
+  top: 50%;
+}
+
+.lightbox--dark .right {
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  opacity: 0;
+  top: 50%;
+  position: absolute;
+  right: 1vw;
+}
+
+.lightbox--dark img {
+  -webkit-animation: fadeIn 1s forwards;
+          animation: fadeIn 1s forwards;
+  opacity: 0;
+}
+
+.lightbox--dark .frame-description {
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  opacity: 0;
+  padding-left: 3em;
+  width: 100%;
+  position: relative;
+}
+
+.lightbox--dark .frame-description a {
+  padding-top: 1em;
+  color: inherit;
+  left: 4.5em;
+  position: absolute;
 }
 
 body {

@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { projects } from "../utils/constants";
+import LightBox from "./Lightbox";
 
 const SlideShow = ({ lang, darkTheme }) => {
   const [frame, setFrame] = useState(0);
+  const [showLightbox, setShowLightbox] = useState(false);
+
+  const closeModal = () => {
+    setShowLightbox(false);
+  };
 
   const updateFrame = (direction) => {
     const dir = direction === "right" ? 1 : -1;
@@ -26,26 +32,20 @@ const SlideShow = ({ lang, darkTheme }) => {
         <button onClick={() => updateFrame("left")} className="left">
           <FaChevronLeft />
         </button>
-        <a
-          href={projects[frame].url}
-          target="_blank"
-          className="frame"
-          rel="noreferrer">
-          <img
-            src={projects[frame].src}
-            alt="t"
-            key={`frame-${frame}`}
-            className={darkTheme ? "img--dark" : ""}></img>
-        </a>
+        <button onClick={() => setShowLightbox(!showLightbox)}>show</button>
         <button onClick={() => updateFrame("right")} className="right">
           <FaChevronRight />
         </button>
       </div>
-      <div className="frame-description" key={frame}>
-        <a target="_blank" href={projects[frame].github} rel="noreferrer">
-          {projects[frame].github}
-        </a>
-      </div>
+      {showLightbox && (
+        <LightBox
+          project={projects[frame]}
+          lang={lang}
+          darkTheme={darkTheme}
+          closeModal={closeModal}
+          updateFrame={updateFrame}
+        />
+      )}
     </div>
   );
 };

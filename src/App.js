@@ -79,6 +79,7 @@ function App() {
         handleSetDarkTheme={handleSetDarkTheme}
         lang={lang}
         handleSetLang={handleSetLang}
+        isMobile={isMobile}
       />
       <Nav
         darkTheme={darkTheme}

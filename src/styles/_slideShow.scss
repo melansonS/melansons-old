@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transform: translateX(-10%);
+  padding-right: 10%;
 
   .left {
     transform: translateX(8px);
@@ -66,45 +66,16 @@
       border: 1px solid $light;
     }
   }
-
-  .frame-description {
-    animation: fadeIn 0.8s forwards;
-    opacity: 0;
-    padding-left: 3em;
-    width: 100%;
-    position: relative;
-    a {
-      padding-top: 1em;
-      color: inherit;
-      left: 4.5em;
-      position: absolute;
-    }
-  }
 }
 
 @media screen and(max-width: $mobileBreakpoint) {
   .slideshow-container {
-    transform: translateX(0);
+    padding-right: 0;
 
     .frame {
       img {
         min-width: 100px;
       }
-    }
-  }
-
-  .frame-description {
-    font-size: 1.5em;
-    a {
-      font-size: 0.6em;
-      left: 0;
-    }
-  }
-}
-@media screen and(max-width: 499px) {
-  .frame-description {
-    a {
-      font-size: 0.4em;
     }
   }
 }

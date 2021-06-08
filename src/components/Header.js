@@ -3,7 +3,13 @@ import { FaRegMoon } from "react-icons/fa";
 import { ImSun } from "react-icons/im";
 import sleep from "../utils/sleep";
 
-const Header = ({ darkTheme, handleSetDarkTheme, lang, handleSetLang }) => {
+const Header = ({
+  darkTheme,
+  handleSetDarkTheme,
+  lang,
+  handleSetLang,
+  isMobile,
+}) => {
   const [typing, setTyping] = useState(true);
 
   useEffect(() => {
@@ -35,7 +41,13 @@ const Header = ({ darkTheme, handleSetDarkTheme, lang, handleSetLang }) => {
             className="toggle-lang"
             title="Toggle Language En/Fr"
             onClick={toggleLanguage}>
-            Lang
+            {isMobile
+              ? lang === "en"
+                ? "Fr"
+                : "En"
+              : lang === "en"
+              ? "Français"
+              : "English"}
           </button>
           <button
             onClick={() => handleSetDarkTheme(!darkTheme)}
