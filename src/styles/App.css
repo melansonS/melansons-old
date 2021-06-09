@@ -86,6 +86,10 @@ footer .email-icon {
           transform: translateY(-5px);
 }
 
+.projects-container .project .tech-icon-container {
+  padding-top: 0;
+}
+
 @media screen and (max-width: calc(25px + 1000px)) {
   .projects-container {
     -webkit-box-pack: justify;
@@ -369,6 +373,12 @@ header {
   padding-top: 1em;
 }
 
+.lightbox .tech-icon-container {
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  opacity: 0;
+}
+
 .lightbox .icon-links {
   position: absolute;
   bottom: 1rem;
@@ -489,6 +499,12 @@ header {
   margin: 0 2rem;
   opacity: 0;
   padding-top: 1em;
+}
+
+.lightbox--dark .tech-icon-container {
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  opacity: 0;
 }
 
 .lightbox--dark .icon-links {

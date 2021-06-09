@@ -38,6 +38,18 @@ const Gallery = ({ lang, darkTheme }) => {
                 alt={`thumbnail for ${project.title}`}
                 onClick={() => handleShowLightBox(i)}
                 src={project.src}></img>
+              <div className="tech-icon-container">
+                <div className="group">
+                  {project.tech.map((t) => {
+                    return (
+                      <div key={`${project.id}-${t.p}`} className="tech-icon">
+                        {t.icon}
+                        <p className="tooltip">{t.p}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           );
         })}

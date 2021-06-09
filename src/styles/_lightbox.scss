@@ -67,6 +67,11 @@
     padding-top: 1em;
   }
 
+  .tech-icon-container {
+    animation: fadeIn 0.8s forwards;
+    opacity: 0;
+  }
+
   .icon-links {
     position: absolute;
     bottom: 1rem;

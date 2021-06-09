@@ -20,6 +20,7 @@ import {
   SiReactrouter,
   SiRedux,
   SiSass,
+  SiSocketDotIo,
   SiTrello,
   SiTypescript,
   SiVisualstudiocode,
@@ -73,6 +74,10 @@ const AboutIcons = () => {
           <p className="tooltip">Redux</p>
         </div>
         <div className="tech-icon">
+          <SiSocketDotIo />
+          <p className="tooltip">Socket.io</p>
+        </div>
+        <div className="tech-icon">
           <SiGatsby />
           <p className="tooltip">Gatsby</p>
         </div>
@@ -104,20 +109,12 @@ const AboutIcons = () => {
           <p className="tooltip">Jira</p>
         </div>
         <div className="tech-icon">
-          <SiMicrosoftazure />
-          <p className="tooltip">Azure</p>
-        </div>
-        <div className="tech-icon">
-          <SiTrello />
-          <p className="tooltip">Trello</p>
-        </div>
-        <div className="tech-icon">
           <SiVisualstudiocode />
           <p className="tooltip">VS Code</p>
         </div>
         <div className="tech-icon">
-          <SiPostman />
-          <p className="tooltip">Postman</p>
+          <SiMicrosoftazure />
+          <p className="tooltip">Azure</p>
         </div>
         <div className="tech-icon">
           <SiNetlify />
@@ -126,6 +123,14 @@ const AboutIcons = () => {
         <div className="tech-icon">
           <SiHeroku />
           <p className="tooltip">Heroku</p>
+        </div>
+        <div className="tech-icon">
+          <SiPostman />
+          <p className="tooltip">Postman</p>
+        </div>
+        <div className="tech-icon">
+          <SiTrello />
+          <p className="tooltip">Trello</p>
         </div>
       </div>
     </div>

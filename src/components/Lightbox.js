@@ -61,6 +61,18 @@ const LightBox = ({ lang, darkTheme, project, updateFrame, closeModal }) => {
           <img src={project.src} alt="project-thumbnail"></img>
         </div>
         <div className="frame-description">{project.description}</div>
+        <div className="tech-icon-container">
+          <div className="group">
+            {project.tech.map((t) => {
+              return (
+                <div key={`${project.id}-${t.p}`} className="tech-icon">
+                  {t.icon}
+                  <p className="tooltip">{t.p}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
         <button
           onClick={(e) => {
             e.stopPropagation();

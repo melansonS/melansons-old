@@ -4,6 +4,16 @@ import remindinator_s from "../images/remindinator_s.png";
 import typing_s from "../images/typing_s.png";
 import unsplash_s from "../images/unsplash_s.png";
 
+import {
+  SiFirebase,
+  SiMongodb,
+  SiNodeDotJs,
+  SiPostgresql,
+  SiReact,
+  SiSass,
+  SiSocketDotIo,
+} from "react-icons/si";
+
 export const text = {
   developer: {
     en: "Developer ",
@@ -82,6 +92,11 @@ export const projects = [
     github: "https://github.com/melansonS/boulette",
     description:
       "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors n",
+    tech: [
+      { icon: <SiReact />, p: "React" },
+      { icon: <SiNodeDotJs />, p: "Node" },
+      { icon: <SiSocketDotIo />, p: "Socket.io" },
+    ],
     id: 101,
   },
   {
@@ -92,6 +107,11 @@ export const projects = [
     github: "https://github.com/melansonS/typing-test",
     description:
       "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors n",
+    tech: [
+      { icon: <SiReact />, p: "React" },
+      { icon: <SiNodeDotJs />, p: "Node" },
+      { icon: <SiMongodb />, p: "Mongo" },
+    ],
     id: 102,
   },
   {
@@ -102,6 +122,10 @@ export const projects = [
     github: "https://github.com/melansonS/Unsplash-API",
     description:
       "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors n",
+    tech: [
+      { icon: <SiReact />, p: "React" },
+      { icon: <SiSass />, p: "Sass" },
+    ],
     id: 103,
   },
   {
@@ -112,6 +136,12 @@ export const projects = [
     github: "https://github.com/melansonS/Grouped",
     description:
       "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors n",
+    tech: [
+      { icon: <SiReact />, p: "React" },
+      { icon: <SiNodeDotJs />, p: "Node" },
+      { icon: <SiFirebase />, p: "Firebase" },
+      { icon: <SiSass />, p: "Sass" },
+    ],
     id: 104,
   },
   {
@@ -122,6 +152,11 @@ export const projects = [
     github: "https://github.com/melansonS/remindinator",
     description:
       "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors n",
+    tech: [
+      { icon: <SiReact />, p: "React" },
+      { icon: <SiNodeDotJs />, p: "Node" },
+      { icon: <SiPostgresql />, p: "Postgres" },
+    ],
     id: 105,
   },
 ];
