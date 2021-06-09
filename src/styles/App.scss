@@ -63,3 +63,32 @@ button {
   @include cover();
   background-color: $mainGrey;
 }
+
+@media screen and (orientation: landscape) {
+  .App,
+  body {
+    background-color: $mainLight;
+  }
+
+  .App--dark,
+  .body--dark {
+    background-color: $mainGrey;
+  }
+
+  .projects {
+    overflow-y: scroll;
+  }
+
+  nav,
+  .nav--ark {
+    height: 100vh;
+  }
+
+  .scroll-container {
+    scroll-snap-type: none;
+  }
+
+  .section-indicator {
+    display: none !important;
+  }
+}

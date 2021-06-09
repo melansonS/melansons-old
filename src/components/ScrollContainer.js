@@ -1,13 +1,11 @@
 import React from "react";
-import { text } from "../utils/constants";
-import TypedText from "./TypedText";
-import Gallery from "./Gallery";
-
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-
-import { weekDays } from "../utils/constants";
+import { text, weekDays } from "../utils/constants";
 import convertText from "../utils/convertText";
+import TypedText from "./TypedText";
+import Gallery from "./Gallery";
+import AboutIcons from "./AboutIcons";
 
 const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
   const today = new Date(Date.now());
@@ -56,6 +54,7 @@ const ScrollContainer = ({ darkTheme, lang, setSection, section }) => {
           scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the
         </p>
+        <AboutIcons />
       </div>
       <div
         id="projects"

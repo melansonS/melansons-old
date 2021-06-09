@@ -997,6 +997,55 @@ nav a:hover {
   padding-top: 3em;
 }
 
+.tech-icon-container {
+  padding-top: 1rem;
+}
+
+.tech-icon-container .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 0.5em;
+}
+
+.tech-icon-container .tech-icon {
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  position: relative;
+  -webkit-transition: color 0.6s;
+  transition: color 0.6s;
+}
+
+.tech-icon-container .tech-icon:hover {
+  color: tomato;
+}
+
+.tech-icon-container .tech-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tech-icon-container .tech-icon .tooltip {
+  font-size: 1rem;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
 @media screen and (max-width: 1000px) {
   .typed-text {
     font-size: 52px !important;
@@ -1054,6 +1103,9 @@ nav a:hover {
   .subtext {
     padding-left: 1em;
   }
+  .tech-icon-container .tech-icon {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 499px) {
@@ -1082,6 +1134,9 @@ nav a:hover {
   .contact .what-who {
     margin-bottom: 2rem;
     padding: 0;
+  }
+  .tech-icon-container .tech-icon {
+    font-size: 0.8rem;
   }
 }
 
@@ -1166,5 +1221,30 @@ button {
   width: 100%;
   z-index: -1;
   background-color: #292e33;
+}
+
+@media screen and (orientation: landscape) {
+  .App,
+  body {
+    background-color: #eee8d5;
+  }
+  .App--dark,
+  .body--dark {
+    background-color: #292e33;
+  }
+  .projects {
+    overflow-y: scroll;
+  }
+  nav,
+  .nav--ark {
+    height: 100vh;
+  }
+  .scroll-container {
+    -ms-scroll-snap-type: none;
+        scroll-snap-type: none;
+  }
+  .section-indicator {
+    display: none !important;
+  }
 }
 /*# sourceMappingURL=App.css.map */
