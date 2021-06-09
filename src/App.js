@@ -14,11 +14,15 @@ function App() {
   );
   const [darkTheme, setDarkTheme] = useState(false);
   const [lang, setLang] = useState("en");
+  const [firstLoad, setFirstLoad] = useState(null);
 
   useEffect(() => {
     //LOCAL STORAGE
     const storedLang = localStorage.getItem("lang");
     const storedTheme = localStorage.getItem("darkTheme");
+    if (!storedLang && !storedTheme) {
+      setFirstLoad(Date.now());
+    }
     if (storedLang === "en" || storedLang === "fr") {
       setLang(storedLang);
     }
@@ -34,27 +38,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (isMobile) {
-      window.addEventListener("load", function () {
-        if (isMobile)
-          setTimeout(function () {
-            // This hides the address bar:
-            window.scrollTo(0, 1);
-          }, 0);
-      });
-    }
-    return () => {
-      window.removeEventListener("load", function () {
-        if (isMobile)
-          setTimeout(function () {
-            // This hides the address bar:
-            window.scrollTo(0, 1);
-          }, 0);
-      });
-    };
-  }, [isMobile]);
-
-  useEffect(() => {
     document.querySelector("body").classList = darkTheme ? "body--dark" : "";
   }, [darkTheme]);
 
@@ -68,6 +51,19 @@ function App() {
   };
 
   const handleSetDarkTheme = (bool) => {
+    if (firstLoad) {
+      const now = Date.now();
+      const seconds = (now - firstLoad) / 1000;
+      if (seconds < 60) {
+        console.log(
+          `%cIt only took ${Math.round(seconds)} second${
+            seconds < 2 ? "" : "s"
+          } for you to swith it over to the Dark Theme! \n\n Alright, game recognize game `,
+          "font-size: 1rem"
+        );
+      }
+      setFirstLoad(null);
+    }
     localStorage.setItem("darkTheme", bool);
     setDarkTheme(bool);
   };
