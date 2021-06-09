@@ -103,6 +103,10 @@ footer .email-icon {
   .projects-container .project--dark {
     width: 48%;
   }
+  .projects-container .project img,
+  .projects-container .project--dark img {
+    max-width: 50%;
+  }
 }
 
 @media screen and (max-width: 499px) {
@@ -569,18 +573,31 @@ header {
   }
   .lightbox .img-container,
   .lightbox--dark .img-container {
-    height: 200px;
-    width: 200px;
+    height: 180px !important;
+    width: 180px !important;
   }
   .lightbox .img-container img,
   .lightbox--dark .img-container img {
-    height: 200px;
-    width: 200px;
+    height: 180px !important;
+    width: 180px !important;
   }
   .lightbox .img-container .icon-links,
   .lightbox--dark .img-container .icon-links {
     bottom: 0.5rem;
     right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .lightbox .img-container,
+  .lightbox--dark .img-container {
+    height: 120px !important;
+    width: 120px !important;
+  }
+  .lightbox .img-container img,
+  .lightbox--dark .img-container img {
+    height: 120px !important;
+    width: 120px !important;
   }
 }
 
@@ -601,12 +618,12 @@ header {
 
 @media screen and (max-height: 700px) {
   .img-container {
-    height: 200px !important;
-    width: 200px !important;
+    height: 180px !important;
+    width: 180px !important;
   }
   .img-container img {
-    height: 200px !important;
-    width: 200px !important;
+    height: 180px !important;
+    width: 180px !important;
   }
   .img-container .icon-links {
     bottom: 0.5rem;
@@ -1175,6 +1192,10 @@ nav a:hover {
   }
   .contact .direct-contact {
     bottom: 6rem;
+    padding-top: 1rem;
+  }
+  .contact .direct-contact .contact-pitch {
+    padding-top: 1rem;
   }
 }
 

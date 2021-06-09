@@ -49,6 +49,10 @@
     .project,
     .project--dark {
       width: 48%;
+
+      img {
+        max-width: 50%;
+      }
     }
   }
 }
