@@ -145,6 +145,15 @@
   }
 }
 
+@media screen and(max-width: $mediumBreakpoint) {
+  .lightbox,
+  .lightbox--dark {
+    h1 {
+      margin-top: 0;
+    }
+  }
+}
+
 @media screen and(max-width: $mobileBreakpoint) {
   .lightbox,
   .lightbox--dark {
@@ -171,10 +180,6 @@
   .lightbox--dark {
     height: 70%;
 
-    h1 {
-      margin-top: 0;
-    }
-
     .img-container {
       height: 180px !important;
       width: 180px !important;
@@ -195,6 +200,10 @@
 @media screen and(max-width: 400px) {
   .lightbox,
   .lightbox--dark {
+    height: 75%;
+    h1 {
+      font-size: 1.5rem;
+    }
     .img-container {
       height: 120px !important;
       width: 120px !important;

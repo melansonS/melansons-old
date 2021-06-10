@@ -17,6 +17,14 @@ function App() {
   const [firstLoad, setFirstLoad] = useState(null);
 
   useEffect(() => {
+    console.log(
+      "%cH%cey, thanks for checking out my page!",
+      "color:tomato;font-weight:bold",
+      "font-weight:bold"
+    );
+    console.log(
+      "If you have any feedback or suggestions I'd love to hear it! Feel free to reach out and let me know :D "
+    );
     //LOCAL STORAGE
     const storedLang = localStorage.getItem("lang");
     const storedTheme = localStorage.getItem("darkTheme");
@@ -59,7 +67,7 @@ function App() {
         console.log(
           `%cIt only took ${Math.round(seconds)} second${
             seconds < 2 ? "" : "s"
-          } for you to swith it over to the Dark Theme! \n\n Alright, game recognize game `,
+          } for you to swith it over to the Dark Theme! 🌙 \n\nAlright, game recognize game `,
           "font-size: 1rem"
         );
       }

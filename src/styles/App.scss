@@ -64,7 +64,37 @@ button {
   background-color: $mainGrey;
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-width: 499px) {
+  .App,
+  body {
+    background-color: $mainLight;
+  }
+
+  .App--dark,
+  .body--dark {
+    background-color: $mainGrey;
+  }
+
+  .projects {
+    overflow-y: scroll;
+  }
+
+  nav,
+  .nav--ark {
+    height: 100vh;
+  }
+
+  .scroll-container {
+    scroll-snap-type: none;
+  }
+
+  .section-indicator {
+    display: none !important;
+  }
+}
+
+//height queries
+@media screen and (max-height: 600px) {
   .App,
   body {
     background-color: $mainLight;

@@ -220,6 +220,9 @@ header {
   .header-container .header-buttons button {
     font-size: 1em;
   }
+  .header-container .header-buttons .toggle-lang {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 300px) {
@@ -539,6 +542,13 @@ header {
   border: 3px solid #fef9ef;
 }
 
+@media screen and (max-width: 1000px) {
+  .lightbox h1,
+  .lightbox--dark h1 {
+    margin-top: 0;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .lightbox,
   .lightbox--dark {
@@ -567,10 +577,6 @@ header {
   .lightbox--dark {
     height: 70%;
   }
-  .lightbox h1,
-  .lightbox--dark h1 {
-    margin-top: 0;
-  }
   .lightbox .img-container,
   .lightbox--dark .img-container {
     height: 180px !important;
@@ -589,6 +595,14 @@ header {
 }
 
 @media screen and (max-width: 400px) {
+  .lightbox,
+  .lightbox--dark {
+    height: 75%;
+  }
+  .lightbox h1,
+  .lightbox--dark h1 {
+    font-size: 1.5rem;
+  }
   .lightbox .img-container,
   .lightbox--dark .img-container {
     height: 120px !important;
@@ -1260,7 +1274,32 @@ button {
   background-color: #292e33;
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-width: 499px) {
+  .App,
+  body {
+    background-color: #eee8d5;
+  }
+  .App--dark,
+  .body--dark {
+    background-color: #292e33;
+  }
+  .projects {
+    overflow-y: scroll;
+  }
+  nav,
+  .nav--ark {
+    height: 100vh;
+  }
+  .scroll-container {
+    -ms-scroll-snap-type: none;
+        scroll-snap-type: none;
+  }
+  .section-indicator {
+    display: none !important;
+  }
+}
+
+@media screen and (max-height: 600px) {
   .App,
   body {
     background-color: #eee8d5;

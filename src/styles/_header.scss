@@ -84,6 +84,12 @@ header {
     .header-buttons button {
       font-size: 1em;
     }
+
+    .header-buttons {
+      .toggle-lang {
+        width: auto;
+      }
+    }
   }
 }
 

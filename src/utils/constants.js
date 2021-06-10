@@ -90,8 +90,10 @@ export const projects = [
     title: "Boulette!",
     url: "https://boulette-melansons.vercel.app/",
     github: "https://github.com/melansonS/boulette",
-    description:
-      "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors n",
+    description: {
+      en: "This project came together out of a desire to play Boulette (a fun take on Charades) with friends and family during this past year's lockdown. It allows all of the remote players to interact with the shared pool of prompts in real time thanks to Socket.io!",
+      fr: "Ce projet est né d'une envie de jouer à la Boulette (une version amusante de Charades) avec des amis et la famille pendant le confinement de l'année dernière. Il permet à tous les joueurs distants d'interagir avec le même pool de mots en temps réel grâce à Socket.io !",
+    },
     tech: [
       { icon: <SiReact />, p: "React" },
       { icon: <SiNodeDotJs />, p: "Node" },
@@ -105,8 +107,11 @@ export const projects = [
     title: "Typing Test",
     url: "https://typing-test-ten.vercel.app/",
     github: "https://github.com/melansonS/typing-test",
-    description:
-      "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors n",
+    description: {
+      en: "Put your fingers to the test! See how fast you really are as you compete for a spot at the top of the leader board and keep track of your stats as you hone your skills! Built on a React Frontend and an Express Node Backend which stores all of the incoming results on Mongo DB.",
+      fr: "Mettez vos doigts à l'épreuve! Suivez vos statistiques tout en perfectionnant vos compétences lorsque vous luttez pour la première place! Construit sur un frontend React et un backend Express Node qui stocke tous les résultats sur une base de données Mongo à l'aide de Mongoose.",
+    },
+
     tech: [
       { icon: <SiReact />, p: "React" },
       { icon: <SiNodeDotJs />, p: "Node" },
@@ -120,8 +125,10 @@ export const projects = [
     title: "Unsplash",
     url: "https://unsplash-search-alpha.vercel.app/",
     github: "https://github.com/melansonS/Unsplash-API",
-    description:
-      "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors n",
+    description: {
+      en: "Thanks to a dynamically generated fully responsive masonry layout users are shown high quality images based on their search query. The images are retrieved procedurally as the user scrolls through. Each image provides a link to the original poster's Unsplash Profile and a download link.",
+      fr: "Grâce à une mise en page de maçonnerie entièrement réactive générée de manière dynamique, les utilisateurs voient des images de haute qualité en fonction de leur requête de recherche. Les images sont récupérées de manière procédurale au fur et à mesure du défilement de la page.",
+    },
     tech: [
       { icon: <SiReact />, p: "React" },
       { icon: <SiSass />, p: "Sass" },
@@ -134,8 +141,10 @@ export const projects = [
     title: "Grouped.",
     url: "https://grouped-b4deb.web.app/",
     github: "https://github.com/melansonS/Grouped",
-    description:
-      "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors n",
+    description: {
+      en: "Grouped is a SPA that allows users to add, edit and delete a list people/groups with the goal of assigning people to the various groups. The data is stored on Firebase's firestore and any update made is synchronistically displayed on all open instances of the app in real time.",
+      fr: "Grouped est un SPA qui permet de regrouper divers personnes dans divers groupes. Les données sont stockées sur le firestore de Firebase et toute mise à jour effectuée est affichée de manière synchrone sur toutes les instances ouvertes de l'application en temps réel",
+    },
     tech: [
       { icon: <SiReact />, p: "React" },
       { icon: <SiNodeDotJs />, p: "Node" },
@@ -150,8 +159,10 @@ export const projects = [
     title: "Remindinator",
     url: "https://remindinator.herokuapp.com/",
     github: "https://github.com/melansonS/remindinator",
-    description:
-      "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors n",
+    description: {
+      en: "A straightforward App that allows the user to add and remove items for a list of reminders that they would like sent to their account email address daily! Thanks to node-scheduler and sengrid the user receives daily reminders for their most important tasks! ( Currently turned off )",
+      fr: "Une application simple qui permet d'ajouter et de supprimer des éléments pour une liste de rappels que l'on souhaite envoyer à notre adresse e-mail! Grâce à node-scheduler et sengrid, on reçoit des rappels quotidiens pour nos tâches les plus importantes ! (Actuellement désactivé)",
+    },
     tech: [
       { icon: <SiReact />, p: "React" },
       { icon: <SiNodeDotJs />, p: "Node" },

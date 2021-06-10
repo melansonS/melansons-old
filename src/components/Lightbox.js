@@ -60,7 +60,7 @@ const LightBox = ({ lang, darkTheme, project, updateFrame, closeModal }) => {
           </div>
           <img src={project.src} alt="project-thumbnail"></img>
         </div>
-        <div className="frame-description">{project.description}</div>
+        <div className="frame-description">{project.description[lang]}</div>
         <div className="tech-icon-container">
           <div className="group">
             {project.tech.map((t) => {
