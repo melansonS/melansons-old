@@ -46,6 +46,15 @@ button {
   color: $popColor;
 }
 
+.first-pop {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.first-pop::first-letter {
+  color: $popColor;
+}
+
 @mixin cover {
   bottom: 0;
   height: $mobileHeaderHeight;

@@ -1,7 +1,5 @@
 @mixin scrollArea {
   box-sizing: border-box;
-  // position: relative;
-  // height: calc(100vh - #{$headerHeight});
   height: 100%;
   margin: 1em 0;
   scroll-snap-align: start;
@@ -68,8 +66,9 @@
   flex-direction: column;
   justify-content: center;
 
-  .about-p {
+  .about-body {
     max-width: 1000px;
+    font-size: 1.2rem;
   }
 }
 
@@ -190,6 +189,12 @@
       .subtext {
         padding-left: 1em;
       }
+    }
+  }
+
+  .about {
+    .about-body {
+      font-size: 1em;
     }
   }
 

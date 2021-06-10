@@ -67,7 +67,7 @@ footer .email-icon {
           align-items: center;
 }
 
-.projects-container .project h1::first-letter {
+.projects-container .project:hover h1::first-letter {
   color: tomato;
 }
 
@@ -979,8 +979,9 @@ nav a:hover {
           justify-content: center;
 }
 
-.about .about-p {
+.about .about-body {
   max-width: 1000px;
+  font-size: 1.2rem;
 }
 
 .projects {
@@ -1109,6 +1110,9 @@ nav a:hover {
   }
   .home .typed-text .subtext {
     padding-left: 1em;
+  }
+  .about .about-body {
+    font-size: 1em;
   }
   .projects {
     padding-left: 55px !important;
@@ -1253,6 +1257,15 @@ button {
 }
 
 .pop {
+  color: tomato;
+}
+
+.first-pop {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.first-pop::first-letter {
   color: tomato;
 }
 
