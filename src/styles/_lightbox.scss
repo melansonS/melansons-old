@@ -23,6 +23,12 @@
     position: relative;
     width: 450px;
 
+    a {
+      height: 449px;
+      position: relative;
+      width: 450px;
+    }
+
     img {
       animation: fadeIn 0.8s forwards;
       opacity: 0;
@@ -157,13 +163,13 @@
 
 .-left > * {
   &:not(button) {
-    animation: swoopLeft 0.8s forwards;
+    animation: swoopRight 0.8s forwards;
   }
 }
 
 .-right > * {
   &:not(button) {
-    animation: swoopRight 0.8s forwards;
+    animation: swoopLeft 0.8s forwards;
   }
 }
 
@@ -185,10 +191,12 @@
     .img-container {
       height: 300px;
       width: 300px;
-    }
-    img {
-      height: 300px;
-      width: 300px;
+
+      img,
+      a {
+        height: 300px;
+        width: 300px;
+      }
     }
   }
 
@@ -206,7 +214,8 @@
       height: 180px !important;
       width: 180px !important;
 
-      img {
+      img,
+      a {
         height: 180px !important;
         width: 180px !important;
       }
@@ -229,7 +238,8 @@
     .img-container {
       height: 120px !important;
       width: 120px !important;
-      img {
+      img,
+      a {
         height: 120px !important;
         width: 120px !important;
       }

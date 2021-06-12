@@ -169,7 +169,7 @@ export const projects = [
     url: "https://remindinator.herokuapp.com/",
     github: "https://github.com/melansonS/remindinator",
     description: {
-      en: "A straightforward App that allows the user to add and remove items for a list of reminders that they would like sent to their account email address daily! Thanks to node-scheduler and sengrid the user receives daily reminders for their most important tasks! ( Currently turned off )",
+      en: "A straightforward App that allows the user to add and remove items for a list of reminders that they would like sent to their account email address daily! Thanks to node-scheduler and sengrid the user receives daily reminders for their most important tasks! (Currently turned off)",
       fr: "Une application simple qui permet d'ajouter et de supprimer des éléments pour une liste de rappels que l'on souhaite envoyer à notre adresse e-mail! Grâce à node-scheduler et sengrid, on reçoit des rappels quotidiens pour nos tâches les plus importantes ! (Actuellement désactivé)",
     },
     tech: [

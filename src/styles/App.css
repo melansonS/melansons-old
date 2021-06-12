@@ -377,6 +377,12 @@ header {
   width: 450px;
 }
 
+.lightbox .img-container a {
+  height: 449px;
+  position: relative;
+  width: 450px;
+}
+
 .lightbox .img-container img {
   -webkit-animation: fadeIn 0.8s forwards;
           animation: fadeIn 0.8s forwards;
@@ -490,6 +496,12 @@ header {
   width: 450px;
 }
 
+.lightbox--dark .img-container a {
+  height: 449px;
+  position: relative;
+  width: 450px;
+}
+
 .lightbox--dark .img-container img {
   -webkit-animation: fadeIn 0.8s forwards;
           animation: fadeIn 0.8s forwards;
@@ -565,13 +577,13 @@ header {
 }
 
 .-left > *:not(button) {
-  -webkit-animation: swoopLeft 0.8s forwards;
-          animation: swoopLeft 0.8s forwards;
+  -webkit-animation: swoopRight 0.8s forwards;
+          animation: swoopRight 0.8s forwards;
 }
 
 .-right > *:not(button) {
-  -webkit-animation: swoopRight 0.8s forwards;
-          animation: swoopRight 0.8s forwards;
+  -webkit-animation: swoopLeft 0.8s forwards;
+          animation: swoopLeft 0.8s forwards;
 }
 
 @media screen and (max-width: 1000px) {
@@ -594,8 +606,10 @@ header {
     height: 300px;
     width: 300px;
   }
-  .lightbox img,
-  .lightbox--dark img {
+  .lightbox .img-container img,
+  .lightbox .img-container a,
+  .lightbox--dark .img-container img,
+  .lightbox--dark .img-container a {
     height: 300px;
     width: 300px;
   }
@@ -615,7 +629,9 @@ header {
     width: 180px !important;
   }
   .lightbox .img-container img,
-  .lightbox--dark .img-container img {
+  .lightbox .img-container a,
+  .lightbox--dark .img-container img,
+  .lightbox--dark .img-container a {
     height: 180px !important;
     width: 180px !important;
   }
@@ -641,7 +657,9 @@ header {
     width: 120px !important;
   }
   .lightbox .img-container img,
-  .lightbox--dark .img-container img {
+  .lightbox .img-container a,
+  .lightbox--dark .img-container img,
+  .lightbox--dark .img-container a {
     height: 120px !important;
     width: 120px !important;
   }

@@ -65,7 +65,9 @@ const LightBox = ({
               <FaLink />
             </a>
           </div>
-          <img src={project.src} alt="project-thumbnail"></img>
+          <a href={project.url}>
+            <img src={project.src} alt="project-thumbnail"></img>
+          </a>
         </div>
         <div className="frame-description">{project.description[lang]}</div>
         <div className="tech-icon-container">
