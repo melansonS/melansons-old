@@ -83,11 +83,9 @@ button {
   .body--dark {
     background-color: $mainGrey;
   }
-
   .projects {
-    overflow-y: scroll;
+    height: fit-content;
   }
-
   nav,
   .nav--ark {
     height: 100vh;
@@ -115,7 +113,7 @@ button {
   }
 
   .projects {
-    overflow-y: scroll;
+    height: fit-content;
   }
 
   nav,

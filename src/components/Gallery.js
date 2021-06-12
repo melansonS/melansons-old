@@ -5,7 +5,7 @@ import { projects } from "../utils/constants";
 const Gallery = ({ lang, darkTheme }) => {
   const [frame, setFrame] = useState(0);
   const [showLightbox, setShowLightbox] = useState(false);
-
+  const [direction, setDirection] = useState("right");
   const closeModal = () => {
     setShowLightbox(false);
   };
@@ -15,15 +15,15 @@ const Gallery = ({ lang, darkTheme }) => {
     setShowLightbox(true);
   };
 
-  const updateFrame = (direction) => {
-    const dir = direction === "right" ? 1 : -1;
+  const updateFrame = (d) => {
+    const dir = d === "right" ? 1 : -1;
     let newFrame = frame + dir;
     if (newFrame >= projects.length) {
       newFrame = 0;
     } else if (newFrame < 0) {
       newFrame = projects.length - 1;
     }
-
+    setDirection(d);
     setFrame(newFrame);
   };
 
@@ -61,6 +61,7 @@ const Gallery = ({ lang, darkTheme }) => {
           darkTheme={darkTheme}
           closeModal={closeModal}
           updateFrame={updateFrame}
+          direction={direction}
         />
       )}
     </div>

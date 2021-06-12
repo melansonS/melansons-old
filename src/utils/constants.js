@@ -52,8 +52,8 @@ export const text = {
     fr: "Salut!",
   },
   aboutBody: {
-    en: "I'm ##FSamuel## and I build things for the web! It manages to be both a challenge and an outlet for my technical and creative skills. I am continually curious and am excited to see what I can learn next! I am thrilled to continue to build ##Bcool## things with ##Bcool## people!",
-    fr: "Je m'appelle ##FSamuel## et je construis des trucs pour le Web! Ça me permet de me pousser tant au niveau technique qu'au niveau créatif. Je suis continuellement curieux et j'ai hâte de voir ce que je vais apprendre par la suite. Je suis heureux de continuer à construire des trucs ##Bcool## avec du monde ##Bcool##!",
+    en: "I'm ##FSamuel## and I build things for the web! It manages to be both a challenge and an outlet for my technical and creative skills ✨ I am continually curious and am excited to see what I can learn next! I am thrilled to continue to build ##Bcool## things with ##Bcool## people!",
+    fr: "Moi c'est ##FSamuel## et je construis des trucs pour le Web! Ça me permet de me pousser tant au niveau technique qu'au niveau créatif ✨ Je suis continuellement curieux et j'ai hâte de voir ce que je vais apprendre par la suite. Je suis heureux de continuer à construire des trucs ##Bcool## avec du monde ##Bcool##!",
   },
   // CONTACT PAGE
   contactTitle: {

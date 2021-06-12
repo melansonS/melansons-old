@@ -231,6 +231,58 @@ header {
   }
 }
 
+@-webkit-keyframes swoopLeft {
+  from {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+    opacity: 0.6;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swoopLeft {
+  from {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+    opacity: 0.6;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes swoopRight {
+  from {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+    opacity: 0.6;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swoopRight {
+  from {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+    opacity: 0.6;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -297,7 +349,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 70%;
+  height: 78%;
   padding: 2rem;
   position: relative;
   width: 70%;
@@ -351,9 +403,6 @@ header {
 }
 
 .lightbox .left {
-  -webkit-animation: fadeIn 0.8s forwards;
-          animation: fadeIn 0.8s forwards;
-  opacity: 0;
   left: 1vw;
   position: absolute;
   top: 50%;
@@ -362,9 +411,6 @@ header {
 }
 
 .lightbox .right {
-  -webkit-animation: fadeIn 0.8s forwards;
-          animation: fadeIn 0.8s forwards;
-  opacity: 0;
   top: 50%;
   position: absolute;
   right: 1vw;
@@ -373,17 +419,8 @@ header {
 }
 
 .lightbox .frame-description {
-  -webkit-animation: fadeIn 0.8s forwards;
-          animation: fadeIn 0.8s forwards;
   margin: 0 2rem;
-  opacity: 0;
   padding-top: 1em;
-}
-
-.lightbox .tech-icon-container {
-  -webkit-animation: fadeIn 0.8s forwards;
-          animation: fadeIn 0.8s forwards;
-  opacity: 0;
 }
 
 .lightbox .icon-links {
@@ -425,7 +462,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 70%;
+  height: 78%;
   padding: 2rem;
   position: relative;
   width: 70%;
@@ -479,9 +516,6 @@ header {
 }
 
 .lightbox--dark .left {
-  -webkit-animation: fadeIn 0.8s forwards;
-          animation: fadeIn 0.8s forwards;
-  opacity: 0;
   left: 1vw;
   position: absolute;
   top: 50%;
@@ -490,9 +524,6 @@ header {
 }
 
 .lightbox--dark .right {
-  -webkit-animation: fadeIn 0.8s forwards;
-          animation: fadeIn 0.8s forwards;
-  opacity: 0;
   top: 50%;
   position: absolute;
   right: 1vw;
@@ -501,17 +532,8 @@ header {
 }
 
 .lightbox--dark .frame-description {
-  -webkit-animation: fadeIn 0.8s forwards;
-          animation: fadeIn 0.8s forwards;
   margin: 0 2rem;
-  opacity: 0;
   padding-top: 1em;
-}
-
-.lightbox--dark .tech-icon-container {
-  -webkit-animation: fadeIn 0.8s forwards;
-          animation: fadeIn 0.8s forwards;
-  opacity: 0;
 }
 
 .lightbox--dark .icon-links {
@@ -542,6 +564,16 @@ header {
   border: 3px solid #fef9ef;
 }
 
+.-left > *:not(button) {
+  -webkit-animation: swoopLeft 0.8s forwards;
+          animation: swoopLeft 0.8s forwards;
+}
+
+.-right > *:not(button) {
+  -webkit-animation: swoopRight 0.8s forwards;
+          animation: swoopRight 0.8s forwards;
+}
+
 @media screen and (max-width: 1000px) {
   .lightbox h1,
   .lightbox--dark h1 {
@@ -555,7 +587,7 @@ header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 70%;
+    height: 75%;
   }
   .lightbox .img-container,
   .lightbox--dark .img-container {
@@ -1297,7 +1329,9 @@ button {
     background-color: #292e33;
   }
   .projects {
-    overflow-y: scroll;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   nav,
   .nav--ark {
@@ -1322,7 +1356,9 @@ button {
     background-color: #292e33;
   }
   .projects {
-    overflow-y: scroll;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   nav,
   .nav--ark {

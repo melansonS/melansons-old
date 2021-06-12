@@ -6,7 +6,14 @@ import {
   FaLink,
 } from "react-icons/fa";
 
-const LightBox = ({ lang, darkTheme, project, updateFrame, closeModal }) => {
+const LightBox = ({
+  lang,
+  darkTheme,
+  project,
+  updateFrame,
+  closeModal,
+  direction,
+}) => {
   useEffect(() => {
     const modalHotkeys = (e) => {
       if (e.key === "Escape") {
@@ -29,7 +36,7 @@ const LightBox = ({ lang, darkTheme, project, updateFrame, closeModal }) => {
   return (
     <div className="modal-bg" onClick={closeModal}>
       <div
-        className={`lightbox${darkTheme ? "--dark" : ""}`}
+        className={`lightbox${darkTheme ? "--dark" : ""} -${direction}`}
         onClick={(e) => e.stopPropagation()}
         key={project.id}>
         <h1>{project.title}</h1>
