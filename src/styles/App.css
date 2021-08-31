@@ -185,13 +185,7 @@ header {
 
 .header-buttons .toggle-lang {
   font-size: 1em;
-  -webkit-transition: font-size 0.4s ease;
-  transition: font-size 0.4s ease;
   width: 80px;
-}
-
-.header-buttons .toggle-lang:hover {
-  font-size: 1.1em;
 }
 
 .header-buttons .toggle-theme {
