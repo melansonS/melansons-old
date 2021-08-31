@@ -2,7 +2,8 @@
   box-sizing: border-box;
   height: 100%;
   margin: 1em 0;
-  scroll-snap-align: start;
+  // Testing Sans snap scroll!
+  // scroll-snap-align: start;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: $headerHeight;
@@ -17,7 +18,8 @@
   position: absolute;
   scrollbar-width: none; /* Firefox */
   transition: margin 0.5s;
-  scroll-snap-type: y mandatory;
+  // Testing Sans snap scroll!
+  // scroll-snap-type: y mandatory;
   width: calc(100vw - #{$navWidth});
 }
 
@@ -256,12 +258,12 @@
 }
 
 @media screen and (max-width: 499px) {
-  .scroll-container,
-  .scroll-area,
-  .scroll-area--dark {
-    height: calc(100vh - #{$mobileHeaderHeight});
-    // height: 100%;
-  }
+  // .scroll-container,
+  // .scroll-area,
+  // .scroll-area--dark {
+  //   height: calc(100vh - #{$mobileHeaderHeight});
+  //   height: 100%;
+  // }
 
   .typed-text {
     font-size: 30px !important;

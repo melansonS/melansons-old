@@ -100,14 +100,12 @@ nav {
     -ms-user-select: none; /* Internet Explorer/Edge */
 
     &:hover {
-      opacity: 1;
       cursor: pointer;
     }
   }
 
   .active {
     opacity: 1;
-    // transform: scale(1.1);
   }
 }
 

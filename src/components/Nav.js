@@ -49,25 +49,29 @@ const Nav = ({ darkTheme, isMobile, lang, section, setSection }) => {
           <a
             href="#home"
             onClick={() => setSection(1)}
-            className={`indicator ${section === 1 ? "active" : ""}`}>
+            className={`indicator ${section === 1 ? "active" : ""}`}
+            title={text.home[lang]}>
             .
           </a>
           <a
             href="#about"
             onClick={() => setSection(2)}
-            className={`indicator ${section === 2 ? "active" : ""}`}>
+            className={`indicator ${section === 2 ? "active" : ""}`}
+            title={text.about[lang]}>
             .
           </a>
           <a
             href="#projects"
             onClick={() => setSection(3)}
-            className={`indicator ${section === 3 ? "active" : ""}`}>
+            className={`indicator ${section === 3 ? "active" : ""}`}
+            title={text.projects[lang]}>
             .
           </a>
           <a
             href="#contact"
             onClick={() => setSection(4)}
-            className={`indicator ${section === 4 ? "active" : ""}`}>
+            className={`indicator ${section === 4 ? "active" : ""}`}
+            title={text.contact[lang]}>
             .
           </a>
         </div>

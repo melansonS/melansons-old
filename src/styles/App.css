@@ -859,7 +859,6 @@ nav a:hover {
 }
 
 .section-indicator .indicator:hover {
-  opacity: 1;
   cursor: pointer;
 }
 
@@ -938,8 +937,6 @@ nav a:hover {
   /* Firefox */
   -webkit-transition: margin 0.5s;
   transition: margin 0.5s;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
   width: calc(100vw - 200px);
 }
 
@@ -952,7 +949,6 @@ nav a:hover {
           box-sizing: border-box;
   height: 100%;
   margin: 1em 0;
-  scroll-snap-align: start;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 125px;
@@ -966,7 +962,6 @@ nav a:hover {
           box-sizing: border-box;
   height: 100%;
   margin: 1em 0;
-  scroll-snap-align: start;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 125px;
@@ -1204,11 +1199,6 @@ nav a:hover {
 }
 
 @media screen and (max-width: 499px) {
-  .scroll-container,
-  .scroll-area,
-  .scroll-area--dark {
-    height: calc(100vh - 80px);
-  }
   .typed-text {
     font-size: 30px !important;
     padding-left: 0;
@@ -1311,24 +1301,6 @@ button {
 
 .first-pop::first-letter {
   color: tomato;
-}
-
-.cover {
-  bottom: 0;
-  height: 80px;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-  background-color: #eee8d5;
-}
-
-.cover--dark {
-  bottom: 0;
-  height: 80px;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-  background-color: #292e33;
 }
 
 @media screen and (orientation: landscape) and (max-width: 499px) {

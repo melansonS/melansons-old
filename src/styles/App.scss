@@ -55,23 +55,23 @@ button {
   color: $popColor;
 }
 
-@mixin cover {
-  bottom: 0;
-  height: $mobileHeaderHeight;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}
+// @mixin cover {
+//   bottom: 0;
+//   height: $mobileHeaderHeight;
+//   position: absolute;
+//   width: 100%;
+//   z-index: -1;
+// }
 
-.cover {
-  @include cover();
-  background-color: $mainLight;
-}
+// .cover {
+//   @include cover();
+//   background-color: $mainLight;
+// }
 
-.cover--dark {
-  @include cover();
-  background-color: $mainGrey;
-}
+// .cover--dark {
+//   @include cover();
+//   background-color: $mainGrey;
+// }
 
 @media screen and (orientation: landscape) and (max-width: 499px) {
   .App,
