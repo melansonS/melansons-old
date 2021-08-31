@@ -258,12 +258,10 @@
 }
 
 @media screen and (max-width: 499px) {
-  // .scroll-container,
-  // .scroll-area,
-  // .scroll-area--dark {
-  //   height: calc(100vh - #{$mobileHeaderHeight});
-  //   height: 100%;
-  // }
+  .scroll-container {
+    height: calc(100% - #{$mobileHeaderHeight});
+    padding-top: #{$mobileHeaderHeight};
+  }
 
   .typed-text {
     font-size: 30px !important;

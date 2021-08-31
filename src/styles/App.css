@@ -1199,6 +1199,10 @@ nav a:hover {
 }
 
 @media screen and (max-width: 499px) {
+  .scroll-container {
+    height: calc(100% - 80px);
+    padding-top: 80px;
+  }
   .typed-text {
     font-size: 30px !important;
     padding-left: 0;
@@ -1317,10 +1321,6 @@ button {
     height: -moz-fit-content;
     height: fit-content;
   }
-  nav,
-  .nav--ark {
-    height: 100vh;
-  }
   .scroll-container {
     -ms-scroll-snap-type: none;
         scroll-snap-type: none;
@@ -1343,10 +1343,6 @@ button {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-  }
-  nav,
-  .nav--ark {
-    height: 100vh;
   }
   .scroll-container {
     -ms-scroll-snap-type: none;
